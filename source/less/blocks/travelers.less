@@ -1,0 +1,98 @@
+.travelers {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: @dark-blue-grey;
+  position: relative;
+  z-index: 5;
+  top: -111px;
+}
+
+.travelers__container {
+  padding-top: 120px;
+  padding-bottom: 30px;
+  position: relative;
+  background-image: url("../img/smolov-back-desktop-1.png"), url("../img/rogovaya-back-mobile-1.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 143px 143px, 71px 71px;
+  background-position: 153px 88px, -10px 360px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 89px;
+    z-index: -1;
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: @darker-blue-grey;
+  }
+}
+
+.travelers__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: @mango;
+  margin: 0;
+  padding: 0 25px;
+  line-height: 24px;
+}
+
+.travelers__text {
+  font-weight: 300;
+  color: @white;
+  padding: 0 25px;
+  margin: 0;
+  margin-top: 20px;
+  line-height: 22px;
+}
+
+.travelers__text--bold {
+  font-weight: bold;
+}
+
+.travelers__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 57px;
+}
+
+.travelers__item:not(:first-child) {
+  margin-top: 10px;
+}
+
+
+.travelers__item {
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+    transform: scale(1.01);
+  }
+}
+
+.travelers__link {
+  position: relative;
+  margin-top: 21px;
+  padding: 22px 24px;
+  background-color: @light-gold;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  color: @dark-slate-blue;
+  border-radius: 10px;
+  text-transform: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 23px;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+}

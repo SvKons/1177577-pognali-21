@@ -1,0 +1,111 @@
+.card {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.card:first-child {
+  z-index: 2;
+}
+
+.card:last-child {
+  z-index: 1;
+}
+
+.card__photo {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  display: block;
+  width: 270px;
+  height: 270px;
+}
+
+.card__container {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 23px;
+  padding-bottom: 16px;
+  position: relative;
+  display: block;
+  width: 270px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: @white;
+}
+
+.card__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: @dark-slate-blue;
+  margin-bottom: 16px;
+  padding: 0 37px;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+
+  &:hover,
+  &:focus {
+    color: @dark-slate-blue-opacity70;
+  }
+
+  &:active {
+    color: @dark-slate-blue-opacity30;
+  }
+
+  &::before {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: @salmon;
+    content: "";
+    position: absolute;
+    left: 53px;
+    top: 33px;
+  }
+
+  &--online::before {
+    background-color: @green-apple;
+  }
+}
+
+.card__interests {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: @greyish-brown;
+  padding: 0 25px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.card__flag-list {
+  position: absolute;
+  top: -11px;
+  left: 60px;
+  margin: 0;
+  padding: 0;
+
+  &--twoflags {
+    left: 90px;
+  }
+}
+
+.card__transport {
+  margin: 0 42px;
+}
+
+.card__transport-title {
+  display: none;
+}
+
+.card__level {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}

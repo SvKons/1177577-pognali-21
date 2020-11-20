@@ -1,0 +1,95 @@
+.steps__list {
+  width: 270px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.steps__item {
+  position: relative;
+  margin-top: -15px;
+  width: 270px;
+  padding-top: 21px;
+  padding-bottom: 38px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: left;
+  color: @dark-grey;
+  border-radius: 10px;
+
+  &--one {
+    z-index: 1;
+    margin-top: 0;
+    padding-right: 140px;
+    background-color: @mango;
+  }
+
+  &--one::before {
+    content: "1";
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: @white;
+  }
+
+  &--two {
+    z-index: 2;
+    padding-right: 96px;
+    background-color: @light-mango;
+  }
+
+  &--two::before {
+    content: "2";
+    position: absolute;
+    top: 21px;
+    right: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: @white;
+  }
+
+  &--three {
+    z-index: 3;
+    padding-right: 105px;
+    background-color: @lighter-mango;
+  }
+
+  &--three::before {
+    content: "3";
+    position: absolute;
+    top: 21px;
+    right: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: @white;
+  }
+
+  &--four {
+    z-index: 4;
+    padding-bottom: 23px;
+    padding-right: 125px;
+    background-color: @light-gold;
+  }
+
+  &--four::before {
+    content: "4";
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: @white;
+  }
+}

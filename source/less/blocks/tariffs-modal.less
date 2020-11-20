@@ -1,0 +1,79 @@
+/*.tariffs-modal {
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  top: 3690px;
+  width: 270px;
+  display: none;
+  padding-top: 33px;
+  background-color: @white;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
+}*/
+
+.tariffs-modal__show {
+  display: block;
+}
+
+.tariffs-modal__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: @mango;
+  margin: 0;
+  padding: 0 25px;
+  line-height: 1;
+  text-align: center;
+}
+
+.tariffs-modal__list {
+  font-weight: 300;
+  color: @greyish-brown;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 29px;
+  padding: 0 25px;
+}
+
+.tariffs-modal__item {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 7px;
+  border-top: 1px solid @black-opacity5;
+}
+
+.tariffs-modal__item:last-child {
+  border-bottom: 1px solid @black-opacity5;
+}
+
+.tariffs-modal__offers {
+  margin: 0;
+}
+
+.tariffs-modal__cost {
+  margin: 0;
+}
+
+.tariffs-modal__close {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 270px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  margin-top: 33px;
+  font-weight: bold;
+  line-height: 24px;
+  border: none;
+  color: @dark-slate-blue;
+  background-color: @pale-grey-modal;
+
+  &:hover,
+  &:focus {
+    background-color: @pale-grey;
+  }
+
+  &:active {
+    background-color: @pale-grey;
+    color: @dark-slate-blue-opacity30;
+  }
+}

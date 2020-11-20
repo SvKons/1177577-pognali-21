@@ -1,0 +1,60 @@
+.route {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: @pale-grey;
+  position: relative;
+  z-index: 6;
+  top: -62px;
+}
+
+.route__container {
+  padding-top: 132px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+
+.route__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: @mango;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  line-height: 24px;
+}
+
+.route__text {
+  font-weight: 300;
+  color: @greyish-brown;
+  margin: 0;
+  margin-bottom: 61px;
+  padding-left: 25px;
+  padding-right: 50px;
+}
+
+.route__list {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.route__link {
+  padding: 22px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-transform: none;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 23px;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+}
