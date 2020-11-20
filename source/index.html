@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page-body">
-    <header class="page-header page-header--index page-body__page-header">
-      <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index page-body__main-navigation">
+    <header class="page-body__page-header page-header--index page-header">
+      <nav class="page-body__main-navigation page-header__main-navigation main-navigation--cross main-navigation--open main-navigation--index main-navigation">
         <div class="main-navigation__container container">
 
           <div class="main-navigation__logo-wrapper">
@@ -19,9 +22,15 @@
           </div>
 
           <ul class="main-navigation__site-list site-list">
-            <li class="site-list__item"><a class="site-list__link site-list__link--current main-navigation__site-link" href="#" aria-label="О сервисе">О сервисе</a></li>
-            <li class="site-list__item"><a class="site-list__link main-navigation__site-link" href="form.html" aria-label="Направления">Направления</a></li>
-            <li class="site-list__item"><a class="site-list__link main-navigation__site-link" href="catalog.html" aria-label="Попутчики">Попутчики</a></li>
+            <li class="site-list__item">
+              <a class="main-navigation__site-link site-list__link site-list__link--current" href="#" aria-label="О сервисе">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a class="main-navigation__site-link site-list__link" href="form.html" aria-label="Направления">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a class="main-navigation__site-link site-list__link" href="catalog.html" aria-label="Попутчики">Попутчики</a>
+            </li>
           </ul>
 
           <ul class="main-navigation__login login">
@@ -75,7 +84,7 @@
         </div>
       </nav>
 
-      <section class="page-header__promo page-body__promo promo promo__container container">
+      <section class="page-body__promo page-header__promo promo promo__container container">
         <h1 class="visually-hidden">Главная страница</h1>
 
         <div class="promo__main">
@@ -97,7 +106,9 @@
                 <span class="visually-hidden">mail@htmlacademy.ru</span>
               </a>
             </li>
-            <li class="user__item"><a class="user__link user__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a></li>
+            <li class="user__item">
+              <a class="user__link user__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
+            </li>
           </ul>
           <div class="promo__text">
             <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
@@ -202,7 +213,7 @@
           <p class="travelers__text travelers__text--bold">Теперь можно легко найти единомышленников!</p>
 
           <ul class="travelers__list">
-            <li class="travelers__item travelers__item__card card">
+            <li class="travelers__item travelers__item-card card">
               <img class="card__photo" src="img/firsova-1.jpg" alt="Фото профиля">
 
               <div class="card__container">
@@ -211,17 +222,17 @@
 
                 <ul class="card__flag-list flag-list">
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--srilanka">
+                    <div class="flag-list__flag flag-list__flag--srilanka flag">
                       <img class="flag__img" src="img/flag-sri-lanka.svg" alt="Флаг Шри-ланки">
                     </div>
                   </li>
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--thailand">
+                    <div class="flag-list__flag flag-list__flag--thailand flag">
                       <img class="flag__img" src="img/flag-thailand.svg" alt="Флаг Тайланда">
                     </div>
                   </li>
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--seychelles">
+                    <div class="flag-list__flag flag-list__flag--seychelles flag">
                       <img class="flag__img" src="img/flag-seychelles.svg" alt="Флаг Сейшелльских островов">
                     </div>
                   </li>
@@ -276,22 +287,22 @@
               </div>
             </li>
 
-            <li class="travelers__item travelers__item__card card">
+            <li class="travelers__item travelers__item-card card">
               <img class="card__photo" src="img/demin-1.jpg" alt="Фото профиля">
 
               <div class="card__container">
                 <a class="card__name card__name--online" href="#" aria-label="Профиль Пети Дёмина">Петя Демин</a>
                 <p class="card__interests">#бургер #бар #футбол #концерт #крафт</p>
 
-                <ul class="card__flag-list card__flag-list--twoflags flag-list">
+                <ul class="card__flag-list card__flag-list--two-flags flag-list">
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--belgium">
+                    <div class="flag-list__flag flag-list__flag--belgium flag">
                       <img class="flag__img" src="img/flag-belgium.svg" alt="Флаг Бельгии">
                     </div>
                   </li>
 
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--czech">
+                    <div class="flag-list__flag flag-list__flag--czech flag">
                       <img class="flag__img" src="img/flag-czech.svg" alt="Флаг Чехии">
                     </div>
                   </li>
@@ -433,7 +444,6 @@
 
     <footer class="page-footer page-footer--index">
       <div class="page-footer__container container">
-        <p class="page-footer__title" aria-label="Погнали">Погнали</p>
         <a class="page-footer__logo" href="index.html">
           <img class="page-footer__logo-image" src="img/logo_mobile-b.png" alt="Логотип компании">
         </a>

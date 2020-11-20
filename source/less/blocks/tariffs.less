@@ -1,0 +1,59 @@
+.tariffs {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: @pale-grey;
+  position: relative;
+  z-index: 4;
+  margin-top: -141px;
+}
+
+.tariffs__container {
+  padding-top: 80px;
+  padding-bottom: 38px;
+  padding-left: 50px;
+  padding-right: 26px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 67px;
+    right: 27px;
+    width: 99px;
+    height: 99px;
+    background-image: url("../../img/rates-1.png");
+    background-repeat: no-repeat;
+    background-size: 99px 99px;
+  }
+}
+
+.tariffs__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: @mango;
+  margin: 0;
+  margin-bottom: 44px;
+  padding-right: 133px;
+  line-height: 24px;
+}
+
+.tariffs__link {
+  margin-top: 30px;
+  font-weight: bold;
+  line-height: 16px;
+  text-transform: none;
+  color: @light-navy;
+
+  &:hover,
+  &:focus {
+    color: @light-navy70;
+  }
+
+  &:active {
+    color: @light-navy30;
+  }
+}
+
+.tariffs__modal {
+  display: none;
+}

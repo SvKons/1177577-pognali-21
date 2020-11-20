@@ -1,0 +1,96 @@
+.country-list {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 270px;
+    height: 81px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.country-list__item {
+  position: relative;
+  width: 270px;
+}
+
+.country-list__item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.country-list__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  margin-top: -11px;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: @white;
+}
+
+.country-list__image {
+  position: relative;
+  z-index: 1;
+  width: 270px;
+  display: block;
+}
+
+.country-list__image img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+}
+
+.country-list__name {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+  color: @dark-grey;
+}
+
+.country-list__slogan {
+  font-weight: 500;
+  line-height: 18px;
+  color: @grey-opacity;
+
+  margin: 0;
+  padding-right: 25px;
+}
+
+.country-list__travelers {
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: right;
+  color: @grey-opacity;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 11px;
+    height: 11px;
+    background-image: url("../img/user.png");
+    background-repeat: no-repeat;
+    background-size: 11px 11px;
+  }
+}
+
+.country-list__flag {
+  position: absolute;
+  top: 87px;
+  left: 25px;
+  z-index: 3;
+}

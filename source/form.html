@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
   <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page-body">
-  <header class="page-header page-header--catalog page-body__page-header">
-    <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index page-body__main-navigation">
+  <header class="page-body__page-header page-header page-header--catalog">
+    <nav class="page-body__main-navigation page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
@@ -23,9 +23,15 @@
           </div>
 
           <ul class="main-navigation__site-list site-list">
-            <li class="site-list__item"><a class="site-list__link site-list__link--current main-navigation__site-link" href="#" aria-label="О сервисе">О сервисе</a></li>
-            <li class="site-list__item"><a class="site-list__link main-navigation__site-link" href="form.html" aria-label="Направления">Направления</a></li>
-            <li class="site-list__item"><a class="site-list__link main-navigation__site-link" href="catalog.html" aria-label="Попутчики">Попутчики</a></li>
+            <li class="site-list__item">
+              <a class="main-navigation__site-link site-list__link site-list__link--current" href="#" aria-label="О сервисе">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a class="main-navigation__site-link site-list__link" href="form.html" aria-label="Направления">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a class="main-navigation__site-link site-list__link" href="catalog.html" aria-label="Попутчики">Попутчики</a>
+            </li>
           </ul>
 
           <ul class="main-navigation__login login">
@@ -1018,7 +1024,6 @@
 
   <footer class="page-footer">
     <div class="page-footer__container container">
-      <p class="page-footer__title" aria-label="Погнали">Погнали</p>
       <a class="page-footer__logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo_mobile-b.png" alt="Логотип компании">
       </a>

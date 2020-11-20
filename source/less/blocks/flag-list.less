@@ -1,0 +1,70 @@
+.flag-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flag-list__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.flag-list__flag {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: none;
+    bottom: -66px;
+    left: -59px;
+    padding: 18px 24px;
+    border-radius: 4px;
+    background-color: @darker-slate-blue;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: @white;
+    white-space: nowrap;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    bottom: -13px;
+    left: 9px;
+    width: 16px;
+    height: 18px;
+    background-image: url("../img/triangle-arrow-left.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 16px 8px;
+    transform: rotate(90deg);
+  }
+
+  &--belgium::before {
+    content: "Бельгия";
+  }
+
+  &--czech::before {
+    content: "Чехия";
+  }
+
+  &--srilanka::before {
+    content: "Шри-ланка";
+  }
+
+  &--thailand::before {
+    content: "Таиланд";
+  }
+
+  &--seychelles::before {
+    content: "Сейшелы";
+  }
+
+  &:hover::before,
+  &:hover::after {
+    display: block;
+  }
+}

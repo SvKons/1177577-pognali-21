@@ -1,0 +1,66 @@
+.login {
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.login__link {
+  position: relative;
+  font-weight: bold;
+  color: @dark-blue-grey;
+
+  &--tel {
+    display: none;
+  }
+
+  &--email {
+    display: none;
+  }
+
+  &--login {
+    padding: 10px 30px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: @dark-grey;
+    background-color: @light-gold;
+    border-radius: 25px;
+  }
+
+  &--tel:hover,
+  &--tel:focus {
+    background-color: @dusty-orange;
+  }
+
+  &--email:hover,
+  &--email:focus {
+    background-color: @mango;
+  }
+
+  &--login:hover,
+  &--login:focus {
+    background-color: @lighter-mango;
+  }
+
+  &--tel:active {
+    background-color: @dusty-orange;
+  }
+
+  &--email:active {
+    background-color: @mango;
+  }
+
+  &--tel:active .login__icon {
+    opacity: 0.3;
+  }
+
+  &--email:active .login__icon {
+    opacity: 0.3;
+  }
+
+  &--login:active {
+    color: @dark-grey-opacity30;
+    background-color: @lighter-mango;
+  }
+}
