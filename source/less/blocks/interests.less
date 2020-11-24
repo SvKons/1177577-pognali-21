@@ -1,0 +1,43 @@
+.interests__label {
+  position: relative;
+  padding: 0 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @dark-slate-blue;
+  z-index: 2;
+  margin-left: 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 73px;
+    height: 18px;
+    background-color: @pale-grey;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.interests__textarea {
+  margin-top: -12px;
+  padding: 21px 24px;
+  padding-bottom: 22px;
+  width: 270px;
+  color: @greyish-brown-opacity60;
+  line-height: 22px;
+  border: solid 1px @cloudy-blue;
+  border-radius: 10px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border: solid 1px @dark-cloudy-blue;
+  }
+
+  &:active {
+    color: @greyish-brown;
+    border: solid 1px @dark-grey;
+  }
+}

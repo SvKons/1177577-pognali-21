@@ -1,0 +1,59 @@
+.trip {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0 25px;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  position: relative;
+  border-radius: 10px;
+  background-color: @white;
+  color: @dark-slate-blue;
+}
+
+.trip__name {
+  position: relative;
+  margin: 0;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.trip__name span {
+  font-weight: 500;
+  letter-spacing: 1.6px;
+}
+
+.trip__quantity,
+.trip__date {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.trip__quantity {
+  margin-top: 21px;
+}
+
+.trip__date {
+  margin-top: 5px;
+}
+
+.trip__link {
+  margin-top: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 1.4px;
+  color: @black-opacity30;
+
+  &:hover,
+  &:focus {
+    color: @black-opacity60;
+  }
+
+  &:active {
+    color: @black-opacity10;
+  }
+}

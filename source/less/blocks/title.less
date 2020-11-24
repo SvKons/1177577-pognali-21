@@ -1,0 +1,41 @@
+.title {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  background-color: @dark-grey;
+  z-index: 7;
+}
+
+.title__container {
+  padding-top: 35px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.title__name {
+  font-size: 36px;
+  font-weight: bold;
+  color: @white;
+  margin: 0;
+  line-height: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 25px;
+    z-index: 1;
+    width: 173px;
+    height: 5px;
+    border-radius: 2.4px;
+    background-color: @mango;
+  }
+
+  &--form::before {
+    width: 214px;
+  }
+}
+
+.title__link {
+  display: none;
+  }

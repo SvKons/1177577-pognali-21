@@ -1,0 +1,75 @@
+.like__number {
+  margin: 0;
+  padding: 6px 0;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: @dark-grey;
+}
+
+.like__button {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: @pale-grey;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @pale-grey-blue;
+  }
+
+  &:active {
+    background-color: @pale-grey-blue;
+  }
+
+  &--active {
+    background-color: @beige;
+  }
+
+  &--active:hover,
+  &--active:focus {
+    background-color: @light-tan;
+  }
+
+  &--active:active {
+    background-color: @light-tan;
+  }
+}
+
+.like__button .like__icon {
+  fill: @dark-blue-grey;
+  opacity: 0.3;
+}
+
+.like__button:hover .like__icon,
+.like__button:focus .like__icon {
+  opacity: 0.5;
+}
+
+.like__button:active .like__icon {
+  opacity: 0.1;
+}
+
+.like__button--active .like__icon {
+  fill: @tomato;
+  opacity: 1;
+}
+
+.like__button--active:hover .like__icon,
+.like__button--active:focus .like__icon {
+  fill: @tomato;
+  opacity: 1;
+}
+
+.like__button--active:active .like__icon {
+  opacity: 0.3;
+  fill: @tomato;
+}
+
+.like__icon {
+  width: 13px;
+  height: 11px;
+}

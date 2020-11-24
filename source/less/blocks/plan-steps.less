@@ -1,0 +1,98 @@
+.plan-steps {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0 25px;
+  padding-top: 22px;
+  padding-bottom: 6px;
+  position: relative;
+  border-radius: 10px;
+  background-color: @white;
+  border: none;
+
+  &--pb {
+    padding-bottom: 22px;
+  }
+}
+
+.plan-steps__link--arrow::before,
+.plan-steps__link--back::before {
+  display: none;
+}
+
+.plan-steps__title {
+  margin-bottom: 16px;
+}
+
+.plan-steps__step {
+  font-size: 20px;
+  font-weight: bold;
+  color: @dark-slate-blue;
+  line-height: 20px;
+  margin: 0;
+}
+
+.plan-steps__text {
+  margin: 0;
+  margin-bottom: 21px;
+  line-height: 22px;
+  color: @greyish-brown;
+}
+
+.plan-steps__registration {
+  margin-bottom: 19px;
+}
+
+.plan-steps__calendar {
+  margin-bottom: 22px;
+}
+
+.plan-steps__road {
+  margin-bottom: 25px;
+}
+
+.plan-steps__link,
+.plan-steps__submit {
+  padding: 5px 40px;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  color: @dark-grey;
+  border: none;
+}
+
+.plan-steps__link {
+  &:active {
+    color: @dark-slate-blue-opacity30;
+  }
+
+  &--next {
+    margin-bottom: 6px;
+  }
+
+  &--prev {
+    padding-left: 53px;
+    padding-right: 27px;
+    border: none;
+    background-color: transparent;
+  }
+
+  &--prev:hover,
+  &--prev:focus {
+    color: @dark-slate-blue-opacity70;
+  }
+
+  &--prev:active {
+    color: @dark-slate-blue-opacity30;
+  }
+}
+
+.plan-steps__actions {
+  margin-bottom: 22px;
+}
+
+.plan-steps__submit {
+  padding-left: 65px;
+  padding-right: 72px;
+  margin-bottom: 6px;
+}

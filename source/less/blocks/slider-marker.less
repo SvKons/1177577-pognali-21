@@ -1,0 +1,32 @@
+.slider-marker {
+  display: none;
+}
+
+.slider-marker__step:not(:first-child) {
+  margin-top: 21px;
+}
+
+.slider-marker__step {
+  margin: 0;
+  position: relative;
+
+
+  &--active {
+    color: @dark-slate-blue;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 0;
+    top: 10px;
+    border-radius: 50%;
+    background-color: @steel-grey;
+  }
+
+  &--active::before {
+    background-color: @dark-slate-blue;
+  }
+}

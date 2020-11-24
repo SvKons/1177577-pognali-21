@@ -1,0 +1,224 @@
+.registration__row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.registration__label {
+  position: relative;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: @dark-slate-blue;
+
+  &--children {
+    padding: 7px 0;
+    padding-left: 39px;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: normal;
+    font-weight: 400;
+    text-transform: none;
+    color: @greyish-brown;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 4px;
+      border: solid 1px @cloudy-blue;
+    }
+  }
+}
+
+.registration__checkbox:checked + .registration__label--children::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: solid 1px @cloudy-blue;
+  background-color: transparent;
+  background-image: url("../img/checkbox-on.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+}
+
+.registration__checkbox + .registration__label--children:hover::before,
+.registration__checkbox + .registration__label--children:focus::before,
+.registration__checkbox:checked + .registration__label--children:hover::before,
+.registration__checkbox:checked + .registration__label--children:focus::before {
+  border: solid 1px @blue-grey;
+}
+
+
+.registration__checkbox + .registration__label--children:active::before,
+.registration__checkbox:checked + .registration__label--children:active::before {
+  border: none;
+  background-color: @pale-grey-blue-light;
+}
+
+.registration__checkbox:focus + .registration__label,
+.registration__checkbox:checked:focus + .registration__label {
+  outline: 2px solid  #81b3d2;
+}
+
+.registration__control {
+  width: 134px;
+  height: 43px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 13.5px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: @dark-slate-blue;
+  border: solid 1px @cloudy-blue;
+  border-left: none;
+  border-right: none;
+  text-transform: uppercase;
+}
+
+.registration__control::-webkit-input-placeholder {
+  color: @dark-slate-blue;
+}
+
+.registration__control::-moz-placeholder {
+  color: @dark-slate-blue;
+}
+
+.registration__units {
+  margin: 0;
+  margin-left: auto;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(29, 46, 91, 0.3);
+}
+
+.registration__number {
+  display: flex;
+  margin-top: 9px;
+
+  &:hover .registration__control,
+  &:focus .registration__control {
+    border: solid 1px @blue-grey;
+    border-left: none;
+    border-right: none;
+  }
+
+  &:active .registration__control {
+    border: solid 1px @dark-grey;
+    border-left: none;
+    border-right: none;
+  }
+
+  &:hover .registration__minus,
+  &:focus .registration__minus {
+    border: solid 1px @blue-grey;
+    border-right: none;
+  }
+
+  &:active .registration__minus {
+    border: solid 1px @dark-grey;
+    border-right: none;
+  }
+
+  &:focus .registration__plus,
+  &:hover .registration__plus {
+    border: solid 1px @blue-grey;
+    border-left: none;
+  }
+
+  &:active .registration__plus {
+    border: solid 1px @dark-grey;
+    border-left: none;
+  }
+}
+
+.registration__minus,
+.registration__plus {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  background-color: @white;
+  border: solid 1px @cloudy-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    top: 20px;
+    right: 15px;
+    background-color: @cloudy-blue;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
+    background-color: @blue-grey;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @dark-grey;
+  }
+}
+
+.registration__minus {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: none;
+
+  &:hover,
+  &:focus {
+    border-right: none;
+  }
+
+  &:active {
+    border-right: none;
+  }
+}
+
+.registration__plus {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+
+  &::before {
+    right: 13px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 14px;
+    top: 14px;
+    right: 19px;
+    background-color: @cloudy-blue;
+  }
+
+  &:hover,
+  &:focus {
+    border-left: none;
+  }
+
+  &:active {
+    border-left: none;
+  }
+}

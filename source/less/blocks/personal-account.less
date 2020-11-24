@@ -1,0 +1,123 @@
+.personal-account {
+  background-color: @pale-grey;
+  margin-bottom: 43px;
+}
+
+.personal-account__container {
+  padding-top: 23px;
+  padding-bottom: 33px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-account__level {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 19px 0;
+  margin-left: 17px;
+}
+
+.personal-account__photo {
+  margin-left: auto;
+  margin-right: 17px;
+}
+
+.personal-account__photo-img {
+  display: block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.personal-account__change-photo {
+  padding: 5px 75px;
+  margin-top: 19px;
+  margin-bottom: 23px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  color: @dark-grey;
+  border-radius: 20px;
+  background-color: @pale-grey-dark;
+
+  &:hover,
+  &:focus {
+    background-color: @lighter-blue-grey;
+  }
+
+  &:active {
+    color: @dark-slate-blue-opacity30;
+    background-color: @lighter-blue-grey;
+  }
+}
+
+.personal-account__interests {
+  margin-bottom: 11px;
+}
+
+.personal-account__transport-item {
+  background-color: @white;
+  border: none;
+
+  &:hover,
+  &:focus {
+    fill: @darker-slate-blue;
+  }
+
+  &:active {
+    fill: @darker-slate-blue;
+    background-color: @pale-grey-blue-light;
+  }
+}
+
+.personal-account__transport-list {
+  width: 270px;
+  margin: 0;
+  margin-top: -10px;
+  padding: 14px 66px;
+  border: solid 1px @cloudy-blue;
+  border-radius: 10px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border: solid 1px @dark-cloudy-blue;
+  }
+
+  &:active {
+    color: @greyish-brown;
+    border: solid 1px @dark-grey;
+  }
+}
+
+.personal-account__transport-title {
+  position: relative;
+  padding: 0 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @dark-slate-blue;
+  z-index: 2;
+  margin: 0;
+  margin-left: 77px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 18px;
+    background-color: @pale-grey;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.personal-account__add-plan {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+}
