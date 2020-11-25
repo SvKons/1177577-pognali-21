@@ -1,0 +1,20 @@
+.slider {
+  margin-left: auto;
+  display: flex;
+}
+
+.slider__marker {
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: @steel-grey;
+}
+
+.slider__marker--active {
+  background-color: @dark-slate-blue;
+}
+
+.slider__marker:not(:first-child) {
+  margin-left: 19px;
+}

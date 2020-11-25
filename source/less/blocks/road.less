@@ -1,0 +1,321 @@
+.road {
+  position: relative;
+}
+
+.road__row:not(:last-child) {
+  padding-bottom: 21px;
+}
+
+.road__row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  &::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @dark-slate-blue;
+    content: "";
+    position: absolute;
+    right: 48px;
+    top: 17px;
+    z-index: 2;
+  }
+
+  &--white::before {
+    background-color: @white;
+    border: 1px solid @cloudy-blue;
+  }
+
+  &--light::before {
+    background-color: @pale-grey;
+    border: 1px solid @cloudy-blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background-image: url("../../img/small-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    bottom: 6px;
+    right: 50px;
+  }
+
+  &--modal .road__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--modal .road__control--select {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    border: none;
+    background-color: @dark-slate-blue;
+    color: @white;
+    z-index: 3;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 14px;
+      background-color: @white;
+      top: 16px;
+      right: 21px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.road__control {
+  position: relative;
+  z-index: 1;
+  width: 168px;
+  height: 43px;
+  padding-left: 10px;
+  padding-top: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 13.5px;
+  letter-spacing: 1.4px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  color: @dark-slate-blue;
+  border: solid 1px @cloudy-blue;
+  border-radius: 4px;
+  background-color: @white;
+
+  &:hover,
+  &:focus {
+    border: solid 1px @blue-grey;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: 43px;
+    height: 43px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 7px 14px;
+    background-position: 18px 12px;
+    transform: rotate(90deg);
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 43px;
+    height: 43px;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, @white 40%);
+    background-repeat: no-repeat;
+    background-size: 43px 43px;
+    background-position: 0 0;
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+
+  &--select,
+  &--add,
+  &--modal {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: unset;
+    flex-grow: 1;
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--select:hover,
+  &--select:focus {
+    border: solid 1px @blue-grey;
+  }
+
+  &--add {
+    border: none;
+    background-color: @pale-grey;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 2px;
+      height: 14px;
+      top: 12px;
+      right: 20px;
+      background-image: none;
+      background-color: @cloudy-blue;
+    }
+
+    &::after {
+      transform: rotate(0);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @pale-grey-dark;
+      border: none;
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: @light-grey;
+    }
+
+    &:active {
+      color: @dark-slate-blue-opacity30;
+      background-color: @pale-grey-dark;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: @lighter-grey;
+    }
+  }
+}
+
+.road__flag {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin: 0;
+  padding: 9px 7px;
+  width: 52px;
+  height: 43px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+
+  &--choice::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 18px;
+    top: 12px;
+    left: 15px;
+    opacity: 0.3;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 9px 17px;
+    transform: rotate(90deg);
+  }
+}
+
+.road__flag .flag__img {
+  width: 35px;
+  height: 24px;
+}
+
+.road__wrap {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 43px;
+  background-color: @white;
+  box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
+}
+
+.road__alphabet {
+  padding: 0;
+  width: 220px;
+}
+
+.road__alphabet-button:hover,
+.road__alphabet-button:focus {
+  border: 1px solid @blue-grey;
+}
+
+.road__alphabet-button:active {
+  border: none;
+  color: @white;
+  background-color: @dark-slate-blue;
+}
+
+.road__alphabet-button--current {
+  background-color: @pale-grey;
+  color: @dark-slate-blue;
+}
+
+.road__country-choice {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  width: 220px;
+  border: 1px solid @cloudy-blue;
+  border-top: none;
+}
+
+.road__country-choice-name:hover,
+.road__country-choice-name:focus {
+  color: @dark-slate-blue;
+}
+
+.road__country-choice-name:active {
+  color: @dark-slate-blue-opacity30;
+}
+
+.road__close {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: @pale-grey;
+  position: absolute;
+  z-index: 3;
+  border: none;
+  top: -10px;
+  right: -10px;
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: @grey-cross;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @grey-cross-opacity10;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: @grey-cross-opacity30;
+    top: 4px;
+    left: 10px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

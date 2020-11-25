@@ -1,0 +1,122 @@
+.country-filters {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  background-color: @pale-grey-blue;
+  margin-top: -60px;
+  z-index: 6;
+}
+
+.country-filters__container {
+  padding-top: 56px;
+  padding-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--close .country-filters__show {
+    display: none;
+  }
+
+  &--close .country-filters__part-world {
+    display: none;
+  }
+}
+
+.country-filters__name {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: @dark-blue-grey;
+  position: relative;
+  margin: 0;
+  padding-left: 29px;
+  border: none;
+  text-transform: uppercase;
+  line-height: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.country-filters__part-world {
+  margin-top: 29px;
+  padding-left: 20px;
+  display: block;
+}
+
+.country-filters__toggler {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.country-filters__alphabet {
+  margin-top: 18px;
+}
+
+.country-filters__country-choice {
+  margin-top: 15px;
+  padding: 0 27px;
+}
+
+.country-filters__hide {
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 110px;
+  padding-right: 86px;
+  margin-top: 37px;
+  margin-bottom: 14px;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 29.5px;
+  border-radius: 20px;
+  color: @dark-grey;
+  background-color: @light-blue-grey;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 83px;
+    width: 16px;
+    height: 2px;
+    background-color: @dark-blue-grey;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &focus {
+    background-color: @light-blue;
+  }
+
+  &:active {
+    color: @dark-slate-blue-opacity30;
+    background-color: @light-blue;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}

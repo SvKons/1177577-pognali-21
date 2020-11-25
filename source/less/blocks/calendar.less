@@ -1,0 +1,80 @@
+.calendar__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: @dark-slate-blue;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid @grey-opacity;
+  border-left: none;
+  border-right: none;
+}
+
+.calendar__wrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.calendar__prev {
+  position: relative;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 18px;
+    background-image: url("../img/month-arrow-left.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.5;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+}
+
+.calendar__next {
+  position: relative;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9px;
+    height: 18px;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.5;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+.calendar__table {
+  border-collapse: collapse;
+}

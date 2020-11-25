@@ -1,0 +1,44 @@
+.toggler {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+
+  &--open::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 3px;
+    top: 27px;
+    right: 0;
+    background-image: url("../img/dots.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 3px;
+  }
+
+  &--close {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 1px;
+      top: 27px;
+      right: 0;
+      background-color: @dark-blue-grey;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.toggler__text {
+  display: none;
+}
