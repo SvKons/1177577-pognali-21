@@ -2,22 +2,40 @@
   padding: 0;
   list-style-type: none;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+
+    &--navigation {
+      padding-left: 57px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .contacts__item {
   font-weight: bold;
   text-align: left;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      margin-left: 111px;
+    }
+
+    &--navigation:last-child {
+      margin-left: 0;
+    }
+  }
 }
 
 .contacts__link {
   display: flex;
   align-items: center;
   color: @light-gold;
-
-  &--navigation {
-    color: @dark-blue-grey;
-  }
 
   &:hover span,
   &:focus span {
@@ -39,20 +57,24 @@
     opacity: 0.3;
   }
 
-  &--navigation:hover span,
-  &--navigation:focus span {
-    color: @dark-blue-grey;
-    opacity: 0.6;
-  }
-
-  &--navigation:active span {
-    color: @dark-blue-grey;
-    opacity: 0.3;
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
   }
 }
 
 .contacts__icon {
   fill: @light-gold;
+
+  @media (min-width: @tablet-width) {
+    width: 27px;
+    height: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .contacts__wrapper {
@@ -65,5 +87,23 @@
 
   &--navigation {
     margin-right: 16px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 20px;
+    margin-right: 30px;
+    width: 67px;
+    height: 67px;
+
+    &--navigation {
+      margin-right: 24px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 90px;
+    height: 90px;
+    padding: 31px 25px;
+    margin-right: 30px;
   }
 }

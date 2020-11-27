@@ -24,7 +24,7 @@
   }
 
   &--index::before {
-    background-color: @black-opacity30;
+    background-color: @black-opacity60;
   }
 }
 
@@ -104,6 +104,12 @@
     height: 2px;
     opacity: 1;
   }
+
+  @media (min-width: @tablet-width) {
+    &--catalog::before {
+      display: block;
+    }
+  }
 }
 
 .level__text {
@@ -121,6 +127,12 @@
     font-size: 18px;
     line-height: 22px;
     color: @greyish-brown;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--catalog {
+      display: block;
+    }
   }
 }
 
@@ -141,6 +153,12 @@
     line-height: 38px;
     padding-bottom: 3px;
     cursor: pointer;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--form {
+      color: @white;
+    }
   }
 }
 

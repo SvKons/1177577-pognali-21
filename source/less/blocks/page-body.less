@@ -18,10 +18,19 @@
 
 .page-body .page-body__country-filters {
   display: block;
+
+    @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .page-body .page-body__part-world {
   display: block;
+
+    @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .page-body .page-body__text--open {
@@ -30,8 +39,24 @@
 
 .page-body .page-body__page-header {
   background-position: 50% 461px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 50% 1230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 50% 0;
+  }
 }
 
 .page-body .page-body__promo {
   background-position: 0 0, 77px 151px;
+
+  @media (min-width: @tablet-width) {
+    background-position: 284px 284px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 604px, 110px;
+  }
 }

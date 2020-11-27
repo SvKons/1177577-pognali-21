@@ -3,6 +3,20 @@
   margin: 0;
   padding: 0;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 285px;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 285px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .card:first-child {
@@ -21,6 +35,15 @@
   display: block;
   width: 270px;
   height: 270px;
+
+  @media (min-width: @tablet-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .card__container {
@@ -34,6 +57,23 @@
   padding-left: 25px;
   padding-right: 25px;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 29px;
+    padding-bottom: 26px;
+    width: 285px;
+    padding-left: 27px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 29px;
+    padding-bottom: 27px;
+    width: 285px;
+    padding-left: 27px;
+  }
 }
 
 .card__name {
@@ -71,6 +111,24 @@
   &--online::before {
     background-color: @green-apple;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 21px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 3.5px;
+      left: 46px;
+      top: 39px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .card__interests {
@@ -81,6 +139,17 @@
   padding: 0 25px;
   line-height: 18px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .card__flag-list {
@@ -92,6 +161,14 @@
 
   &--twoflags {
     left: 90px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 70px;
+
+    &--twoflags {
+      left: 100px;
+    }
   }
 }
 
@@ -108,4 +185,14 @@
   top: 16px;
   left: 16px;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: 23px;
+    left: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 25px;
+    left: 23px;
+  }
 }

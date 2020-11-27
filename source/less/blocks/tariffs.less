@@ -5,6 +5,16 @@
   position: relative;
   z-index: 4;
   margin-top: -141px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .tariffs__container {
@@ -25,6 +35,53 @@
     background-repeat: no-repeat;
     background-size: 99px 99px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 101px;
+    padding-bottom: 65px;
+    padding-left: 40px;
+    padding-right: 33px;
+
+    &::before {
+      z-index: 2;
+      top: 439px;
+      right: 86px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 180px;
+      right: 40px;
+      width: 198px;
+      height: 285px;
+      border-radius: 20px;
+      background-color: @pale-grey-blue;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 132px;
+    padding-bottom: 164px;
+    padding-left: 131px;
+    padding-right: 133px;
+
+    &::before {
+      width: 198px;
+      height: 198px;
+      top: 315px;
+      right: 134px;
+      background-size: 198px 198px;
+    }
+
+    &::after {
+      width: 444px;
+      height: 300px;
+      right: 246px;
+      top: 263px;
+    }
+  }
 }
 
 .tariffs__title {
@@ -35,6 +92,20 @@
   margin-bottom: 44px;
   padding-right: 133px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    padding-left: 106px;
+    padding-right: 0;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-bottom: 136px;
+    text-align: center;
+  }
 }
 
 .tariffs__link {
@@ -51,6 +122,34 @@
 
   &:active {
     color: @light-navy30;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-left: 89px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-top: 33px;
+    font-size: 20px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: @pale-grey-blue;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/business.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 17px 21px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 33px;
   }
 }
 
