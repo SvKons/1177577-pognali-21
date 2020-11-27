@@ -30,8 +30,8 @@
 .card__photo {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   display: block;
   width: 270px;
   height: 270px;
@@ -39,8 +39,8 @@
   @media (min-width: @tablet-width) {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     width: 285px;
     height: 285px;
   }
@@ -77,16 +77,16 @@
 }
 
 .card__name {
-  font-size: 20px;
   font-weight: bold;
   color: @dark-slate-blue;
-  margin-bottom: 16px;
-  padding: 0 37px;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   text-decoration: none;
   display: block;
+
+  margin-bottom: 16px;
+  padding: 0 37px;
 
   &:hover,
   &:focus {

@@ -92,7 +92,7 @@
     background-size: 100% 100%;
   }
 
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     &::after {
       background-image: url("../img/logo-tablet-b.png");
     }
@@ -160,7 +160,8 @@
     display: none;
   }
 }
-  .main-navigation--open .main-navigation__toggler {
+
+.main-navigation--open .main-navigation__toggler {
   &::before,
   &::after {
     height: 2px;
@@ -252,7 +253,6 @@
     display: block;
     width: auto;
     margin-left: auto;
-    padding-bottom: 0;
     order: 3;
   }
 }
