@@ -7,15 +7,49 @@
   background-position: 0 0, 79px 150px;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 100%, 192px 256px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/traveller-illustration-tablet.png");
+    background-position: 284px 281px;
+    background-size: 372px 448px;
+  }
+
+  @media (min-width: @desktop-width) {
+    @include border-bottom-radius (60px, 60px);
+    background-image: url("../img/traveller-illustration-desktop.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 604px, 110px;
+    background-size: 431px 640px;
+  }
 }
 
 .promo__container {
   position: relative;
   padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 97px;
+    padding-bottom: 124px;
+  }
 }
 
 .promo__main {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 216px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-bottom: 103px;
+  }
 }
 
 .promo__slogan {
@@ -27,6 +61,23 @@
   padding: 0 15px;
   line-height: 40px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 88px;
+    padding-left: 140px;
+    padding-right: 140px;
+    font-size: 60px;
+    line-height: 70px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+    padding-left: 67px;
+    width: 470px;
+    text-align: left;
+  }
 }
 
 .promo__user {
@@ -37,25 +88,72 @@
 .promo__text {
   margin: 0;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+    padding-right: 340px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 286px;
+    margin-top: 10px;
+    padding: 0;
+  }
 }
 
 .promo__quote {
   margin: 0;
   margin-bottom: 20px;
   padding-right: 65px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
+    padding: 0;
+  }
 }
 
 .promo__author {
   margin: 0;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 .promo__position {
   margin: 0;
   padding-right: 65px;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .promo__steps {
   margin-bottom: -240px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }

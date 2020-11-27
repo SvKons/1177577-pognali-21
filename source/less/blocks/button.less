@@ -59,4 +59,10 @@
   &--bg:active {
     background-color: @lighter-mango;
   }
+
+  @media (min-width: @tablet-width) {
+    &--submit::before {
+      display: block;
+    }
+  }
 }

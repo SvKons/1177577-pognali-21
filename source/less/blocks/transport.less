@@ -6,6 +6,23 @@
   margin: 0;
   margin-top: 12px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 176px;
+
+    &--catalog {
+      flex-direction: column;
+      width: unset;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--catalog {
+      flex-direction: row;
+      width: 132px;
+    }
+  }
 }
 
 .transport__item {
@@ -105,6 +122,25 @@
     fill: @darker-slate-blue;
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+    padding: 10px 11px;
+    background-color: @white;
+
+    &--index {
+      width: 33px;
+      height: 33px;
+      padding: 8px 9px;
+    }
+
+    &--catalog {
+      width: 33px;
+      height: 33px;
+      padding: 6px 9px;
+    }
+  }
 }
 
 .transport__legend {
@@ -113,11 +149,45 @@
   text-align: center;
   text-transform: uppercase;
   color: @dark-slate-blue;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: @pale-grey;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 }
 
 .transport__icon {
   fill: @dark-slate-blue-opacity15;
   color: @dark-slate-blue-opacity15;
+
+  @media (min-width: @tablet-width) {
+    &--plane {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--train {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--bicycle {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--walking {
+      width: 20px;
+      height: 21px;
+    }
+  }
 }
 
 .transport__control:checked + .transport__icon {

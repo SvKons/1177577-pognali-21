@@ -5,14 +5,41 @@
   position: relative;
   z-index: 6;
   top: -62px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .route__container {
   padding-top: 132px;
   padding-bottom: 30px;
   position: relative;
-}
 
+  @media (min-width: @tablet-width) {
+    padding-top: 131px;
+    padding-bottom: 80px;
+    background-image: url("../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-position: 439px 142px;
+    background-size: 289px 575px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 225px;
+    padding-bottom: 139px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-position: 1091px 150px;
+  }
+}
 
 .route__title {
   font-size: 24px;
@@ -22,6 +49,19 @@
   margin-bottom: 20px;
   padding-left: 25px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+    padding-left: 34px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-bottom: 58px;
+    padding-left: 802px;
+  }
 }
 
 .route__text {
@@ -31,12 +71,38 @@
   margin-bottom: 61px;
   padding-left: 25px;
   padding-right: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 107px;
+    padding-left: 35px;
+    padding-right: 306px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 99px;
+    padding-left: 802px;
+    padding-right: 170px;
+  }
 }
 
 .route__list {
   list-style: none;
   margin: 0;
   margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 224px;
+    left: 132px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .route__link {
@@ -56,5 +122,30 @@
     height: 14px;
     background-image: url("../img/triangle-arrow-right.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 35px;
+    padding: 29px 34px;
+    width: 618px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &::before {
+      top: 34px;
+      right: 34px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 274px;
+    margin-right: 241px;
+    margin-left: auto;
+    padding: 29px 32px;
+
+    &::before {
+      right: 37px;
+    }
   }
 }

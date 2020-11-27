@@ -12,17 +12,31 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    border-top: 0;
+  }
 }
 
 .copyright__by {
   margin: 0;
   text-align: center;
   color: @greyish-brown;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+  }
 }
 
 .copyright__link {
   display: flex;
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 24px;
+  }
 }
 
 .copyright__icon {

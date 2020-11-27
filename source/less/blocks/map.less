@@ -2,6 +2,14 @@
   position: relative;
   z-index: 1;
   margin-top: -42px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -84px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -200px;
+  }
 }
 
 .map__image {
@@ -26,6 +34,22 @@
     background-image: url("../img/map-marker.svg");
     background-repeat: no-repeat;
     z-index: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 56px;
+      height: 56px;
+      top: 270px;
+      left: 356px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: 344px;
+      left: 692px;
+    }
   }
 }
 
