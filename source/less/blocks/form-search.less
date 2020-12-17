@@ -1,7 +1,25 @@
 .form-search__container {
   width: 320px;
+
   margin: 0 auto;
   padding: 0 25px;
   padding-top: 21px;
   padding-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+
+    margin: 0 auto;
+    padding: 0 40px;
+    padding-top: 78px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+  }
 }

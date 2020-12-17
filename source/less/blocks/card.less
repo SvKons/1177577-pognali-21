@@ -1,12 +1,14 @@
 .card {
   position: relative;
+  border-radius: 10px;
+
   margin: 0;
   padding: 0;
-  border-radius: 10px;
 
   @media (min-width: @tablet-width) {
     width: 285px;
     border-radius: 20px;
+
     margin: 0;
     padding: 0;
   }
@@ -14,6 +16,7 @@
   @media (min-width: @desktop-width) {
     display: block;
     width: 285px;
+
     margin: 0;
     padding: 0;
   }
@@ -28,62 +31,69 @@
 }
 
 .card__photo {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   display: block;
   width: 270px;
   height: 270px;
 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
   @media (min-width: @tablet-width) {
+    width: 285px;
+    height: 285px;
+
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    width: 285px;
-    height: 285px;
   }
 }
 
 .card__container {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding-top: 23px;
-  padding-bottom: 16px;
   position: relative;
   display: block;
   width: 270px;
-  padding-left: 25px;
-  padding-right: 25px;
   background-color: @white;
 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 23px;
+  padding-bottom: 16px;
+
   @media (min-width: @tablet-width) {
+    width: 285px;
+
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-top: 29px;
-    padding-bottom: 26px;
-    width: 285px;
+
     padding-left: 27px;
     padding-right: 32px;
+    padding-top: 29px;
+    padding-bottom: 26px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 285px;
+
     padding-top: 29px;
     padding-bottom: 27px;
-    width: 285px;
     padding-left: 27px;
   }
 }
 
 .card__name {
+  display: block;
   font-weight: bold;
   color: @dark-slate-blue;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   text-decoration: none;
-  display: block;
 
   margin-bottom: 16px;
   padding: 0 37px;
@@ -113,9 +123,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 21px;
     font-size: 24px;
     line-height: 24px;
+
+    margin-bottom: 21px;
 
     &::before {
       width: 7px;
@@ -132,19 +143,21 @@
 }
 
 .card__interests {
-  margin: 0;
-  margin-bottom: 12px;
   font-size: 15px;
   color: @greyish-brown;
-  padding: 0 25px;
   line-height: 18px;
   text-align: center;
 
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0 25px;
+
   @media (min-width: @tablet-width) {
-    padding: 0;
-    margin-bottom: 16px;
     font-size: 20px;
     line-height: 24px;
+
+    margin-bottom: 16px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {

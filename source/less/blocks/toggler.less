@@ -1,12 +1,13 @@
 .toggler {
   position: relative;
   display: flex;
-  margin-left: auto;
-  margin-top: auto;
   width: 40px;
   height: 40px;
   border: none;
   background-color: transparent;
+
+  margin-left: auto;
+  margin-top: auto;
 
   &--open::before {
     content: "";
@@ -37,8 +38,57 @@
       transform: rotate(-45deg);
     }
   }
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 24px;
+
+    padding-right: 27px;
+
+    &--open::before {
+      width: 27px;
+      height: 5px;
+      top: 9px;
+      background-size: 27px 5px;
+    }
+
+    &--close {
+      width: 181px;
+
+      &::before,
+      &::after {
+        width: 24px;
+        height: 2px;
+        top: 11px;
+        right: 0;
+      }
+    }
+  }
 }
 
 .toggler__text {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: @dark-blue-grey;
+
+    margin: 0;
+    padding-right: 20px;
+
+    &--open {
+      display: none;
+    }
+
+    &--close {
+      padding-right: 57px;
+      display: block;
+    }
+
+    &--page-body {
+      display: block;
+    }
+  }
 }

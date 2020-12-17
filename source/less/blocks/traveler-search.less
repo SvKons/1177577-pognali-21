@@ -1,11 +1,26 @@
 .traveler-search {
+  border-radius: 20px;
+  background-color: @light-gold;
+
+  margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 22px;
   padding-left: 20px;
   padding-right: 25px;
-  margin: 0 auto;
-  border-radius: 20px;
-  background-color: @light-gold;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 35px;
+    padding-bottom: 38px;
+    padding-left: 35px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 
 .traveler-search__title {
@@ -13,25 +28,45 @@
   font-weight: bold;
   color: @dark-slate-blue;
   position: relative;
+  line-height: 22px;
+
   margin-top: 0;
   margin-bottom: 23px;
   padding-left: 5px;
-  line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+
+    margin-bottom: 38px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
 }
 
 .traveler-search__fieldset {
+  border-top: 1px solid @cheese;
+
   margin: 0;
   padding: 0;
   padding-left: 5px;
-  border-top: 1px solid #f3c72b;
 
   &--open .traveler-search__list {
     display: block;
+
     margin-bottom: 12px;
   }
 
   &--open .traveler-search__list--transport {
     display: flex;
+
     padding-top: 5px;
     margin-bottom: 19px;
   }
@@ -48,20 +83,74 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+
+    padding-left: 0;
+    padding-top: 15px;
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+
+    &--level-range {
+      border-bottom: 1px solid @cheese;
+
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+    }
+
+    &--top {
+      padding-top: 29px;
+    }
+
+    &--open .traveler-search__list {
+      display: flex;
+
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+
+    &--open .traveler-search__toggler {
+      padding-top: 5px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    padding-top: 0;
+
+    &--level-range {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    &--open .traveler-search__list {
+      margin-bottom: 20px;
+    }
+
+    &--open .traveler-search__list--transport {
+      margin-top: 10px;
+      margin-bottom: 23px;
+    }
+  }
 }
 
 .traveler-search__toggler {
   font-size: 16px;
   font-weight: bold;
   width: 100%;
-  padding-left: 0;
-  padding-right: 20px;
-  padding-top: 11px;
-  padding-bottom: 10px;
   line-height: 18px;
   text-align: left;
   background-color: transparent;
   border: none;
+
+  padding-left: 0;
+  padding-right: 20px;
+  padding-top: 11px;
+  padding-bottom: 10px;
 
   &::before {
     content: "";
@@ -93,24 +182,92 @@
   &:active::before {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 110px;
+    font-size: 20px;
+    line-height: 30px;
+
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: ":";
+      position: absolute;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+
+    padding-left: 0;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &::before {
+      display: block;
+      top: 11px;
+    }
+  }
 }
 
 .traveler-search__list {
   display: none;
+  list-style: none;
+
   margin: 0;
   padding: 0;
-  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 16px;
+
+    &--transport {
+      margin-left: 11px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+
+    margin-left: 0;
+  }
+}
+
+.traveler-search__item {
+  @media (min-width: @tablet-width) {
+    width: 170px;
+
+    &--transport {
+      width: 43px;
+    }
+
+    &:last-child {
+      margin-left: 2px;
+    }
+  }
 }
 
 .traveler-search__label {
   position: relative;
   display: block;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  padding-left: 27px;
   font-size: 15px;
   line-height: 15px;
   color: @greyish-brown;
+
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 27px;
 
   &--transport {
     padding: 0;
@@ -124,6 +281,23 @@
   &:active {
     color: @greyish-brown-opacity30;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding-top: 8px;
+    padding-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
+    padding-bottom: 3px;
+
+    &--transport {
+      padding: 0;
+    }
+  }
 }
 
 .traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport)::before {
@@ -135,6 +309,16 @@
   height: 18px;
   border-radius: 4px;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+    top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 13px;
+  }
 }
 
 .traveler-search__control + .traveler-search__label:hover::before,
@@ -151,6 +335,12 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 9px 9px;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+    background-size: 12px 12px;
+  }
 }
 
 .traveler-search__control:checked + .traveler-search__label:hover,
@@ -172,15 +362,25 @@
 
 .traveler-search__level-range {
   display: none;
+
   margin-top: 2px;
   margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+
+    margin: 0;
+  }
 }
 
 .traveler-search__submit {
-  @include vertical-paddings (5px, 5px);
   position: relative;
-  padding-left: 76px;
-  padding-right: 77px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
@@ -188,6 +388,11 @@
   border-radius: 20px;
   border: none;
   background-color: @white;
+
+  padding-left: 76px;
+  padding-right: 77px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   &:hover,
   &:focus {
@@ -197,5 +402,28 @@
   &:active {
     color: @dark-grey-opacity30;
     background-color: @cheese;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    border-radius: 30px;
+
+    margin-top: 74px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 261px;
+    padding-right: 266px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 56px;
+
+    &::before {
+      display: none;
+    }
   }
 }

@@ -18,26 +18,29 @@
 }
 
 .route__container {
-  padding-top: 132px;
-  padding-bottom: 30px;
   position: relative;
 
+  padding-top: 132px;
+  padding-bottom: 30px;
+
   @media (min-width: @tablet-width) {
-    padding-top: 131px;
-    padding-bottom: 80px;
     background-image: url("../img/flags-back.png");
     background-repeat: no-repeat;
     background-position: 439px 142px;
     background-size: 289px 575px;
+
+    padding-top: 131px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 225px;
-    padding-bottom: 139px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     background-position: 1091px 150px;
+
+    padding-top: 225px;
+    padding-bottom: 139px;
   }
 }
 
@@ -45,21 +48,23 @@
   font-size: 24px;
   font-weight: bold;
   color: @mango;
+  line-height: 24px;
+
   margin: 0;
   margin-bottom: 20px;
   padding-left: 25px;
-  line-height: 24px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 59px;
-    padding-left: 34px;
     font-size: 45px;
     line-height: 45px;
+
+    margin-bottom: 59px;
+    padding-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
     margin-bottom: 58px;
+    padding: 0;
     padding-left: 802px;
   }
 }
@@ -67,17 +72,19 @@
 .route__text {
   font-weight: 300;
   color: @greyish-brown;
+
   margin: 0;
   margin-bottom: 61px;
   padding-left: 25px;
   padding-right: 50px;
 
   @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+
     margin-bottom: 107px;
     padding-left: 35px;
     padding-right: 306px;
-    font-size: 28px;
-    line-height: 33px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,6 +96,7 @@
 
 .route__list {
   list-style: none;
+
   margin: 0;
   margin-bottom: 23px;
 
@@ -106,12 +114,13 @@
 }
 
 .route__link {
-  padding: 22px 24px;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
   text-transform: none;
   border-radius: 10px;
+
+  padding: 22px 24px;
 
   &::before {
     content: "";
@@ -125,12 +134,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0 35px;
-    padding: 29px 34px;
     width: 618px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
+
+    margin: 0 35px;
+    padding: 29px 34px;
 
     &::before {
       top: 34px;
@@ -140,6 +150,7 @@
 
   @media (min-width: @desktop-width) {
     width: 274px;
+
     margin-right: 241px;
     margin-left: auto;
     padding: 29px 32px;

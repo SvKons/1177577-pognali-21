@@ -1,20 +1,50 @@
 .add-plan__container {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  background-color: @light-blue-grey;
+
   padding-top: 28px;
   padding-bottom: 62px;
-  background-color: @light-blue-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 177px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 46px;
+    padding-bottom: 187px;
+  }
 }
 
 .add-plan_wrapper {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 25px;
-  position: relative;
   display: flex;
+  width: 320px;
+  position: relative;
   align-items: center;
+
   margin-bottom: 31px;
+  margin: 0 auto;
   padding-right: 34px;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+
+    margin: 0 auto;
+    margin-bottom: 52px;
+    padding: 0 75px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+
+    margin: 0 auto;
+    margin-bottom: 52px;
+    padding: 0 130px;
+  }
 }
 
 .add-plan__title {
@@ -22,9 +52,33 @@
   font-weight: bold;
   color: @dark-slate-blue;
   line-height: 24px;
+
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 50px;
+  }
 }
 
 .add-plan__fieldset:not(:first-child) {
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 44px;
+  }
+}
+
+.add-plan__fieldset:last-child {
+  @media (min-width: @tablet-width) {
+    margin-top: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 45px;
+  }
 }

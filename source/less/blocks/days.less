@@ -2,9 +2,9 @@
   position: relative;
   width: 33px;
   height: 31px;
+  text-align: center;
   background-color: @white;
   border: 1px solid @cloudy-blue;
-  text-align: center;
 
   &--free {
     background-color: @pale-grey;
@@ -26,6 +26,32 @@
       left: 0;
       z-index: 2;
       background-color: transparent;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 77px;
+    height: 69px;
+
+    &--focus {
+      &::before {
+        width: 77px;
+        height: 69px;
+        border: solid 4px @orange-red;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 144px;
+    height: 71px;
+
+    &--focus {
+      &::before {
+        width: 144px;
+        height: 71px;
+      }
     }
   }
 }
@@ -105,14 +131,98 @@
     color: @white;
     background-color: transparent;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    &:hover::before,
+    &:focus::before {
+      width: 77px;
+      height: 70px;
+      top: -3px;
+      left: -3px;
+      border: solid 4px @orange-red;
+      border-radius: 2px;
+    }
+
+    &--focus::before {
+      width: 77px;
+      height: 70px;
+      top: -3px;
+      left: -3px;
+      border: solid 4px @orange-red;
+      border-radius: 2px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: top;
+
+    padding: 5px 16px;
+    padding-bottom: 33px;
+
+    &--month {
+      display: inline;
+    }
+
+    &--text {
+      display: block;
+    }
+
+    &--active {
+      padding-bottom: 0;
+    }
+
+    &--focus {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      width: 146px;
+      height: 74px;
+      top: -3px;
+      left: -3px;
+      border: solid 4px @orange-red;
+    }
+
+    &--focus::before {
+      width: 146px;
+      height: 74px;
+      top: -3px;
+      left: -3px;
+      border: solid 4px @orange-red;
+    }
+
+    &--active span {
+      color: @white;
+    }
+
+    &:disabled span {
+      color: @grey-opacity;
+    }
+
+    &--pb {
+      padding-bottom: 32px;
+    }
+  }
 }
 
 .days__button span {
+  height: 30px;
+  text-transform: none;
   border: none;
   background-color: transparent;
-  text-transform: none;
+
   padding: 0;
-  height: 30px;
 }
 
 .days__button span::before {

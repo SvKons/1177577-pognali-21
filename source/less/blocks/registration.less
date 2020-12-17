@@ -1,3 +1,14 @@
+.registration {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    padding-top: 30px;
+    border-top: 1px solid @light-blue-grey;
+  }
+}
+
 .registration__row {
   position: relative;
   display: flex;
@@ -5,6 +16,61 @@
 
   &:not(:first-child) {
     margin-top: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    &--people {
+      order: 1;
+      border-top: 1px solid @light-blue-grey;
+
+      padding-top: 24px;
+    }
+
+    &--days {
+      order: 3;
+      border-top: 1px solid @light-blue-grey;
+
+      padding-top: 24px;
+    }
+
+    &--children {
+      order: 2;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-top: unset;
+    }
+
+    &--people {
+      order: 1;
+      border: none;
+      flex-wrap: nowrap;
+
+      margin-bottom: 14px;
+      padding: 0;
+    }
+
+    &--days {
+      order: 3;
+      border: none;
+      display: flex;
+
+      padding: 0;
+    }
+
+    &--children {
+      order: 2;
+
+      margin-left: auto;
+    }
   }
 }
 
@@ -17,14 +83,15 @@
   color: @dark-slate-blue;
 
   &--children {
-    padding: 7px 0;
-    padding-left: 39px;
     font-size: 15px;
     line-height: 15px;
     letter-spacing: normal;
     font-weight: 400;
     text-transform: none;
     color: @greyish-brown;
+
+    padding: 7px 0;
+    padding-left: 39px;
 
     &::before {
       content: "";
@@ -36,6 +103,31 @@
       border-radius: 4px;
       border: solid 1px @cloudy-blue;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    &--children {
+      font-weight: 500;
+      text-transform: uppercase;
+
+      padding: 10px 0;
+      padding-left: 58px;
+
+      &::before {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+
+    margin: 0;
   }
 }
 
@@ -53,6 +145,12 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 9px 9px;
+
+  @media (min-width: @tablet-width) {
+    width: 36px;
+    height: 36px;
+    background-size: 12px 12px;
+  }
 }
 
 .registration__checkbox + .registration__label--children:hover::before,
@@ -88,6 +186,19 @@
   border-left: none;
   border-right: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 390px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40px;
+    padding: 0;
+  }
 }
 
 .registration__control::-webkit-input-placeholder {
@@ -99,17 +210,33 @@
 }
 
 .registration__units {
-  margin: 0;
-  margin-left: auto;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   color: rgba(29, 46, 91, 0.3);
+
+  margin: 0;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    color: @dark-slate-blue;
+
+    margin: 0;
+    margin-left: 36px;
+  }
 }
 
 .registration__number {
   display: flex;
+
   margin-top: 9px;
 
   &:hover .registration__control,
@@ -146,6 +273,21 @@
     border: solid 1px @dark-grey;
     border-left: none;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+
+    margin: 0;
+    margin-left: 27px;
+
+    &--days {
+      margin-left: 53px;
+    }
+  }
 }
 
 .registration__minus,
@@ -176,6 +318,17 @@
   &:active::before,
   &:active::after {
     background-color: @dark-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 70px;
+
+    &::before {
+      width: 20px;
+      top: 33px;
+      right: 27px;
+    }
   }
 }
 
@@ -220,5 +373,17 @@
 
   &:active {
     border-left: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      right: 18px;
+    }
+
+    &::after {
+      height: 20px;
+      top: 24px;
+      right: 27px;
+    }
   }
 }

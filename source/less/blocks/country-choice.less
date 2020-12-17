@@ -1,0 +1,267 @@
+.country-choice {
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.country-choice__name {
+  text-decoration: none;
+  color: @greyish-brown;
+
+  &:hover,
+  &:focus {
+    color: @dark-slate-blue;
+  }
+
+  &:active {
+    color: @dark-slate-blue-opacity30;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.country-choice__list {
+  position: relative;
+  list-style-type: none;
+  display: none;
+
+  margin: 0;
+  padding: 0;
+
+  &--open {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 252px;
+
+    padding-top: 92px;
+    margin-bottom: 48px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 60px;
+      text-transform: uppercase;
+      color: @dark-blue-grey;
+      display: block;
+    }
+
+    &--1 {
+      display: block;
+
+      &::before {
+        content: "А";
+      }
+    }
+
+    &--2 {
+      display: block;
+
+      &::before {
+        content: "Б";
+      }
+    }
+
+    &--3 {
+      display: block;
+
+      &::before {
+        content: "В";
+      }
+    }
+
+    &--4 {
+      display: block;
+
+      &::before {
+        content: "Г";
+      }
+    }
+
+    &--5 {
+      display: block;
+
+      &::before {
+        content: "Д";
+      }
+    }
+
+    &--6 {
+      display: block;
+
+      &::before {
+        content: "Е";
+      }
+    }
+
+    &--7 {
+      display: block;
+
+      &::before {
+        content: "З";
+      }
+    }
+
+    &--8 {
+      display: block;
+
+      &::before {
+        content: "И";
+      }
+    }
+
+    &--9 {
+      display: block;
+
+      &::before {
+        content: "К";
+      }
+    }
+
+    &--10 {
+      display: block;
+
+      &::before {
+        content: "Л";
+      }
+    }
+
+    &--11 {
+      display: block;
+      margin-bottom: 85px;
+
+      &::before {
+        content: "М";
+      }
+    }
+
+    &--12 {
+      display: block;
+
+      &::before {
+        content: "Н";
+      }
+    }
+
+    &--13 {
+      display: block;
+
+      &::before {
+        content: "О";
+      }
+    }
+
+    &--14 {
+      display: block;
+
+      &::before {
+        content: "П";
+      }
+    }
+
+    &--15 {
+      display: block;
+
+      &::before {
+        content: "Р";
+      }
+    }
+
+    &--16 {
+      display: block;
+
+      &::before {
+        content: "С";
+      }
+    }
+
+    &--17 {
+      display: block;
+
+      &::before {
+        content: "Т";
+      }
+    }
+
+    &--18 {
+      display: block;
+
+      &::before {
+        content: "У";
+      }
+    }
+
+    &--19 {
+      display: block;
+
+      &::before {
+        content: "Ф";
+      }
+    }
+
+    &--20 {
+      display: block;
+
+      &::before {
+        content: "Х";
+      }
+    }
+
+    &--21 {
+      display: block;
+
+      &::before {
+        content: "Ч";
+      }
+    }
+
+    &--22 {
+      display: block;
+
+      &::before {
+        content: "Ш";
+      }
+    }
+
+    &--23 {
+      display: block;
+
+      &::before {
+        content: "Э";
+      }
+    }
+
+    &--24 {
+      display: block;
+
+      &::before {
+        content: "Ю";
+      }
+    }
+
+    &--25 {
+      display: block;
+
+      &::before {
+        content: "Я";
+      }
+    }
+  }
+}

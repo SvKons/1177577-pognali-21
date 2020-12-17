@@ -4,8 +4,9 @@
   position: relative;
   z-index: 2;
   list-style-type: none;
-  padding: 0;
+
   margin: 0;
+  padding: 0;
 
   &::before {
     content: "";
@@ -37,24 +38,26 @@
 }
 
 .price-list__item {
+  position: relative;
+
   padding-top: 11px;
   padding-bottom: 12px;
-  position: relative;
   padding-right: 40px;
 
   &::before {
     width: 34px;
     height: 34px;
-    border-radius: 50%;
     background-color: @light-mango;
     content: "1";
     position: absolute;
     top: 6px;
     right: 0;
-    padding: 10px 13px;
     color: @white;
     line-height: 0.88;
     text-align: center;
+    border-radius: 50%;
+
+    padding: 10px 13px;
   }
 
   &::after {
@@ -73,6 +76,7 @@
     z-index: 2;
     display: flex;
     justify-content: space-between;
+
     padding-top: 15px;
     padding-bottom: 19px;
     padding-left: 91px;

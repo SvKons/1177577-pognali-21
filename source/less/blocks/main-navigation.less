@@ -1,16 +1,16 @@
 .main-navigation {
-  padding: 8px 0;
   width: 100%;
+  padding: 8px 0;
 
   &--index {
     padding: 16px 0;
   }
 
   &--open {
+    display: block;
     position: absolute;
     top: 0;
     z-index: 5;
-    display: block;
     background-color: @white;
   }
 
@@ -59,8 +59,9 @@
 
     &--fixed {
       position: fixed;
-      padding: 0;
       background-color: @white;
+
+      padding: 0;
     }
 
     &--fixed .main-navigation__site-list::before {
@@ -116,11 +117,12 @@
 .main-navigation__toggler {
   width: 40px;
   height: 40px;
-  padding: 0;
   border: none;
   background-color: transparent;
   position: relative;
   cursor: pointer;
+
+  padding: 0;
 
   &::before,
   &::after {
@@ -209,14 +211,16 @@
 
 .main-navigation__site-list {
   display: none;
+
   margin: 0;
   padding-left: 0;
   padding-top: 60px;
   padding-bottom: 50px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 58px;
     order: 3;
+
+    padding-left: 58px;
     padding-top: 87px;
     padding-bottom: 118px;
   }
@@ -224,6 +228,7 @@
   @media (min-width: @desktop-width) {
     order: 2;
     display: flex;
+
     padding-top: 60px;
     padding-left: 145px;
     padding-bottom: 10px;
@@ -240,6 +245,7 @@
 
 .main-navigation__wrapper {
   display: none;
+
   padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
@@ -248,12 +254,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 50px;
-    padding-bottom: 50px;
     display: block;
     width: auto;
-    margin-left: auto;
     order: 3;
+
+    margin-left: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -267,22 +274,23 @@
 
 .main-navigation__login {
   display: none;
+
   margin-top: 0;
   margin-bottom: 51px;
 
   @media (min-width: @tablet-width) {
     display: block;
+    order: 2;
     margin-bottom: 0;
     margin-left: auto;
-    order: 2;
   }
 
   @media (min-width: @desktop-width) {
+    order: 4;
+    display: flex;
+    margin-left: unset;
     padding-top: 50px;
     padding-bottom: 10px;
-    order: 4;
-    margin-left: unset;
-    display: flex;
   }
 }
 
@@ -302,12 +310,12 @@
 }
 
 .main-navigation__socials {
-  margin-left: 50%;
   transform: translateX(-50%);
+  margin-left: 50%;
 
   @media (min-width: @tablet-width) {
-    margin-left: 60px;
     transform: translateX(0);
+    margin-left: 60px;
   }
 }
 
