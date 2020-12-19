@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   list-style-type: none;
   width: 132px;
+
   margin: 0;
   margin-top: 12px;
   padding: 0;
@@ -13,6 +14,7 @@
     &--catalog {
       flex-direction: column;
       width: unset;
+
       margin: 0;
     }
   }
@@ -31,6 +33,7 @@
   border-radius: 50%;
   background-color: @white;
   position: relative;
+
   padding: 8px 9px;
 
   &::before {
@@ -39,14 +42,15 @@
     display: none;
     bottom: -66px;
     left: -59px;
-    padding: 18px 24px;
-    border-radius: 4px;
     background-color: @darker-slate-blue;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     color: @white;
     white-space: nowrap;
+    border-radius: 4px;
+
+    padding: 18px 24px;
   }
 
   &::after {
@@ -126,18 +130,21 @@
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 43px;
-    padding: 10px 11px;
     background-color: @white;
+
+    padding: 10px 11px;
 
     &--index {
       width: 33px;
       height: 33px;
+
       padding: 8px 9px;
     }
 
     &--catalog {
       width: 33px;
       height: 33px;
+
       padding: 6px 9px;
     }
   }

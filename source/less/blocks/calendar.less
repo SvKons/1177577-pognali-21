@@ -2,15 +2,30 @@
   font-size: 20px;
   font-weight: bold;
   color: @dark-slate-blue;
-  padding-top: 10px;
-  padding-bottom: 12px;
   position: relative;
-  margin-bottom: 20px;
   line-height: 20px;
   text-align: center;
+
   border: 1px solid @grey-opacity;
   border-left: none;
   border-right: none;
+
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: normal;
+
+    padding-top: 20px;
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .calendar__wrap {
@@ -45,6 +60,24 @@
   &:active::before {
     opacity: 0.1;
   }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 18px;
+      height: 34px;
+      top: 0;
+      left: 15px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 20px;
+      height: 36px;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 .calendar__next {
@@ -72,6 +105,26 @@
 
   &:active::after {
     opacity: 0.1;
+  }
+
+   @media (min-width: @tablet-width) {
+    &::after {
+      width: 18px;
+      height: 34px;
+      top: 0;
+      right: 15px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 4px;
+
+    &::after {
+      width: 20px;
+      height: 36px;
+      top: 0;
+      right: 0;
+    }
   }
 }
 

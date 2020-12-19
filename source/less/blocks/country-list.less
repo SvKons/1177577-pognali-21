@@ -1,6 +1,7 @@
 .country-list {
   position: relative;
   list-style-type: none;
+
   padding: 0;
 
   &::after {
@@ -37,10 +38,11 @@
     padding: 0;
 
     &::before {
-      margin: 0;
-      padding: 0;
       top: -72px;
       left: -72px;
+
+      margin: 0;
+      padding: 0;
     }
 
     &::after {
@@ -76,22 +78,25 @@
   display: flex;
   justify-content: space-between;
   width: 270px;
-  margin-top: -11px;
-  padding: 24px;
   border-radius: 10px;
   background-color: @white;
 
+  margin-top: -11px;
+  padding: 24px;
+
   @media (min-width: @tablet-width) {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     position: relative;
     z-index: 0;
     order: 1;
     display: block;
-    margin-top: 0;
     width: 435px;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    margin-top: 0;
     padding: 30px;
     padding-bottom: 10px;
   }
@@ -148,9 +153,9 @@
   color: @dark-grey;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 5px;
     font-size: 24px;
     line-height: 24px;
+    margin-bottom: 5px;
   }
 }
 
@@ -169,12 +174,13 @@
 
 .country-list__travelers {
   position: relative;
-  margin: 0;
-  padding-left: 18px;
   font-weight: 500;
   line-height: 30px;
   text-align: right;
   color: @grey-opacity;
+
+  margin: 0;
+  padding-left: 18px;
 
   &::before {
     content: "";
@@ -190,9 +196,10 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    padding-left: 30px;
     font-size: 20px;
     text-align: left;
+
+    padding-left: 30px;
 
     &::before {
       content: "";

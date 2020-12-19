@@ -1,9 +1,45 @@
 .road {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    border-top: 1px solid @light-blue-grey;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 127px;
+      z-index: 1;
+      width: 1px;
+      height: 421px;
+      background-image: linear-gradient(to bottom, @light-blue-grey 80%, transparent);
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        right: 225px;
+      }
+    }
+  }
 }
 
 .road__row:not(:last-child) {
   padding-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 15px;
+  }
+}
+
+.road__row:first-child {
+  @media (min-width: @tablet-width) {
+    margin-top: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 62px;
+  }
 }
 
 .road__row {
@@ -74,6 +110,38 @@
 
     &::after {
       transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 15px;
+      height: 15px;
+      border-radius: 38px;
+      right: 120px;
+      top: 26px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &--modal .road__control--select {
+      &::before,
+      &::after {
+        width: 2px;
+        height: 24px;
+        top: 23px;
+        right: 35px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+
+    &::before {
+      right: 218px;
     }
   }
 }
@@ -198,17 +266,56 @@
       background-color: @lighter-grey;
     }
   }
+
+
+  @media (min-width: @tablet-width) {
+    width: 369px;
+    height: 70px;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: left;
+
+    &::before {
+      width: 70px;
+      height: 70px;
+      background-size: 16px 18px, 43px 43px;
+      background-position: 26px 26px, 0 0;
+    }
+
+    &--select,
+    &--add {
+      padding-left: 25px;
+      flex-grow: 0;
+    }
+
+    &--add {
+      &::before,
+      &::after {
+        width: 2px;
+        height: 17px;
+        top: 26px;
+        right: 36px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+  }
 }
 
 .road__flag {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin: 0;
-  padding: 9px 7px;
   width: 52px;
   height: 43px;
   border: solid 1px @cloudy-blue;
   background-color: @white;
+
+  margin: 0;
+  padding: 9px 7px;
 
   &--choice::before {
     content: "";
@@ -223,11 +330,38 @@
     background-size: 9px 17px;
     transform: rotate(90deg);
   }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 70px;
+    height: 47px;
+    border: none;
+    border-left: none;
+
+    margin-left: 53px;
+    padding: 0;
+    padding-top: 12px;
+
+    &--choice::before {
+      top: 27px;
+      left: 36px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 84px;
+    padding: 0;
+  }
 }
 
 .road__flag .flag__img {
   width: 35px;
   height: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+  }
 }
 
 .road__wrap {
@@ -237,11 +371,74 @@
   top: 43px;
   background-color: @white;
   box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 575px;
+    top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
+  }
 }
 
 .road__alphabet {
   padding: 0;
   width: 220px;
+
+  @media (min-width: @tablet-width) {
+    width: 368px;
+
+    padding-top: 34px;
+    padding-left: 26px;
+    padding-right: 79px;
+    padding-bottom: 96px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 489px;
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-bottom: 35px;
+  }
+}
+
+.road__alphabet-button {
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 69px;
+    background-color: @white;
+    color: @dark-slate-blue;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    border: solid 1px @cloudy-blue;
+    border-top: none;
+    border-left: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 62px;
+    height: 71px;
+    border: solid 1px @cloudy-blue;
+  }
+}
+
+.road__alphabet-button--top {
+  @media (min-width: @tablet-width) {
+    border-top: solid 1px @cloudy-blue;
+  }
+}
+
+.road__alphabet-button--left {
+  @media (min-width: @tablet-width) {
+    border-left: solid 1px @cloudy-blue;
+  }
 }
 
 .road__alphabet-button:hover,
@@ -258,17 +455,34 @@
 .road__alphabet-button--current {
   background-color: @pale-grey;
   color: @dark-slate-blue;
+
+  @media (min-width: @tablet-width) {
+    color: @white;
+    background-color: @dark-slate-blue;
+  }
 }
 
 .road__country-choice {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding-top: 12px;
-  padding-bottom: 15px;
-  padding-left: 20px;
   width: 220px;
   border: 1px solid @cloudy-blue;
   border-top: none;
+
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 207px;
+    border-radius: 0;
+    border: none;
+    border-left: 1px solid @cloudy-blue;
+
+    padding-top: 31px;
+    padding-bottom: 15px;
+    padding-left: 24px;
+  }
 }
 
 .road__country-choice-name:hover,
@@ -278,6 +492,24 @@
 
 .road__country-choice-name:active {
   color: @dark-slate-blue-opacity30;
+}
+
+.road__wrap .country-choice__list {
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.road__wrap .country-choice__list::before {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.road__wrap .country-choice__list:not(.country-choice__list--1) {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .road__close {
@@ -317,5 +549,24 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+   @media (min-width: @tablet-width) {
+    position: relative;
+    width: 30px;
+    height: 70px;
+    margin-left: auto;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      width: 2px;
+      height: 23px;
+      top: 21px;
+      left: 20px;
+    }
   }
 }

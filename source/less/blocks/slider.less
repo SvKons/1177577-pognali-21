@@ -1,6 +1,11 @@
 .slider {
-  margin-left: auto;
   display: flex;
+
+  margin-left: auto;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .slider__marker {
@@ -17,4 +22,8 @@
 
 .slider__marker:not(:first-child) {
   margin-left: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 28px;
+  }
 }

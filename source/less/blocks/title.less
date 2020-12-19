@@ -4,20 +4,53 @@
   position: relative;
   background-color: @dark-grey;
   z-index: 7;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: @dark-blue-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-color: @dark-grey;
+  }
 }
 
 .title__container {
+  position: relative;
+
   padding-top: 35px;
   padding-bottom: 12px;
-  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 93px;
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 106px;
+    padding-right: 67px;
+
+    &--form {
+      padding-left: 126px;
+    }
+  }
 }
 
 .title__name {
   font-size: 36px;
   font-weight: bold;
   color: @white;
-  margin: 0;
   line-height: 40px;
+
+  margin: 0;
 
   &::before {
     content: "";
@@ -34,8 +67,79 @@
   &--form::before {
     width: 214px;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+
+    &::before {
+      bottom: -4px;
+      left: 77px;
+      width: 287px;
+      height: 8px;
+      border-radius: 4px;
+    }
+
+    &--form::before {
+      width: 354px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 120px;
+    }
+
+    &--form::before {
+      width: 357px;
+      left: 126px;
+    }
+  }
 }
 
 .title__link {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: @white;
+
+    margin-left: auto;
+    padding-top: 10px;
+    padding-right: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 12px;
+      width: 32px;
+      height: 16px;
+      background-image: url("../img/return.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+
+    &--form {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      &--form {
+        display: none;
+      }
+    }
+  }
 }

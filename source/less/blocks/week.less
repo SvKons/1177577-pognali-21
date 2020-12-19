@@ -1,17 +1,39 @@
 .week__cell {
-  padding-top: 2px;
-  padding-bottom: 7px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   font-weight: normal;
   color: @greyish-brown;
 
+  padding-top: 2px;
+  padding-bottom: 7px;
+
   &--output {
     color: @orange-red;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+
+    padding-top: 5px;
+    padding-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+
+    padding-top: 7px;
+    padding-bottom: 14px;
+    padding-left: 17px;
   }
 }
 
 .week__letter {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
 }

@@ -18,13 +18,14 @@
 }
 
 .travelers__container {
-  padding-top: 120px;
-  padding-bottom: 30px;
   position: relative;
   background-image: url("../img/smolov-back-desktop-1.png"), url("../img/rogovaya-back-mobile-1.png");
   background-repeat: no-repeat, no-repeat;
   background-size: 143px 143px, 71px 71px;
   background-position: 153px 88px, -10px 360px;
+
+  padding-top: 120px;
+  padding-bottom: 30px;
 
   &::before {
     content: "";
@@ -39,14 +40,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 186px;
-    padding-bottom: 88px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     background-image: url("../img/smolov-back-desktop-1.png"), url("../img/rogovaya-back-desktop-1.png");
     background-size: 143px 143px, 285px 285px;
     background-position: 41px 474px, 408px 127px;
+
+    padding-top: 186px;
+    padding-bottom: 88px;
 
     &::before {
       content: "";
@@ -62,10 +64,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 174px;
-    padding-bottom: 134px;
     background-size: 143px 143px, 285px 285px;
     background-position: 547px 182px, 192px 435px;
+
+    padding-top: 174px;
+    padding-bottom: 134px;
 
     &::before {
       content: "";
@@ -85,14 +88,16 @@
   font-size: 24px;
   font-weight: bold;
   color: @mango;
-  margin: 0;
-  padding: 0 25px;
   line-height: 24px;
 
+  margin: 0;
+  padding: 0 25px;
+
   @media (min-width: @tablet-width) {
-    padding-left: 32px;
     font-size: 45px;
     line-height: 45px;
+
+    padding-left: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -103,24 +108,27 @@
 .travelers__text {
   font-weight: 300;
   color: @white;
-  padding: 0 25px;
-  margin: 0;
-  margin-top: 20px;
   line-height: 22px;
 
+  margin: 0;
+  margin-top: 20px;
+  padding: 0 25px;
+
   @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+
     margin-top: 58px;
     padding-left: 35px;
     padding-right: 226px;
-    font-size: 28px;
-    line-height: 33px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 503px;
+
     padding: 0;
     margin-top: 57px;
     padding-left: 71px;
-    width: 503px;
   }
 }
 
@@ -128,11 +136,12 @@
   font-weight: bold;
 
   @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+
     margin-top: 39px;
     padding-left: 35px;
     padding-right: 400px;
-    font-size: 21px;
-    line-height: 25px;
   }
 
   @media (min-width: @desktop-width) {
@@ -144,22 +153,25 @@
 
 .travelers__list {
   list-style-type: none;
+
   margin: 0;
-  padding: 0;
   margin-top: 57px;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+
     margin-top: 60px;
     padding: 0 35px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
     position: absolute;
     top: 183px;
     right: 25px;
+
+    margin: 0;
   }
 }
 
@@ -197,8 +209,6 @@
 
 .travelers__link {
   position: relative;
-  margin-top: 21px;
-  padding: 22px 24px;
   background-color: @light-gold;
   font-size: 18px;
   font-weight: bold;
@@ -206,6 +216,9 @@
   color: @dark-slate-blue;
   border-radius: 10px;
   text-transform: none;
+
+  margin-top: 21px;
+  padding: 22px 24px;
 
   &::before {
     content: "";
@@ -219,13 +232,14 @@
   }
 
   @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
     margin-left: 35px;
     margin-right: 41px;
     margin-top: 79px;
     padding: 29px 33px;
-    font-size: 24px;
-    line-height: 24px;
-    border-radius: 20px;
 
     &::before {
       top: 35px;
@@ -234,8 +248,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 280px;
+
     margin-left: 71px;
     margin-top: 84px;
-    width: 280px;
   }
 }

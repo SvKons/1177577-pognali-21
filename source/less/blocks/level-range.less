@@ -1,0 +1,294 @@
+.level-range {
+  align-items: center;
+}
+
+.level-range__price-controls {
+  position: relative;
+  display: flex;
+
+  &--price::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    left: 102px;
+    width: 16px;
+    height: 1px;
+    background-color: @cloudy-blue;
+  }
+
+  &--price::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 102px;
+    width: 16px;
+    height: 13px;
+    background-color: @white;
+  }
+
+  &--price {
+    order: 1;
+  }
+
+  &--scale {
+    order: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--price {
+      order: 2;
+      margin-left: 62px;
+    }
+
+    &--scale {
+      order: 1;
+    }
+
+    &--price::before {
+      width: 21px;
+      left: 64px;
+      top: 22px;
+    }
+
+    &--price::after {
+      top: 15px;
+      left: 68px;
+      width: 21px;
+      height: 15px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--price {
+      order: 1;
+
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    &--scale {
+      order: 2;
+    }
+
+    &--price::before {
+      left: 85px;
+    }
+
+    &--price::after {
+      left: 85px;
+    }
+  }
+}
+
+.level-range__min-price,
+.level-range__max-price {
+  display: block;
+}
+
+.level-range__min-control,
+.level-range__max-control {
+  position: relative;
+  width: 110px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: @dark-slate-blue;
+  font-family: inherit;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+
+  &:hover,
+  &:focus {
+    border: solid 1px @blue-grey;
+  }
+
+  &:active {
+    border: solid 1px @dark-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 75px;
+    height: 46px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 96px;
+    margin: 0;
+  }
+}
+
+.level-range__min-control {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+}
+
+.level-range__max-control {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.level-range__range-controls {
+  position: relative;
+  margin-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 13px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
+    margin-left: 0;
+  }
+}
+
+.level-range__bar {
+  position: relative;
+  z-index: 1;
+  width: 220px;
+  height: 2px;
+  border-radius: 0.5px;
+  background-color: rgba(29, 46, 91, 0.2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 144px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: rgba(29, 46, 91, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 281px;
+    height: 3px;
+    margin-top: -10px;
+
+    &::before {
+      width: 205px;
+      height: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 191px;
+    height: 2;
+
+    &::before {
+      width: 119px;
+      height: 2;
+    }
+  }
+}
+
+.level-range__toggle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: @dark-slate-blue;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+  }
+
+  &--min {
+    right: 143px;
+  }
+
+  &:hover,
+  &:focus {
+    width: 19px;
+    height: 19px;
+    top: -9px;
+  }
+
+
+  &:hover::before,
+  &:focus::before {
+    width: 19px;
+    height: 19px;
+  }
+
+  &:active {
+    width: 26px;
+    height: 26px;
+    top: -12px;
+  }
+
+  &:active::before {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 13px;
+    width: 13px;
+    top: -15px;
+
+    &::before {
+      height: 13px;
+      width: 13px;
+    }
+
+    &:hover,
+    &:focus {
+      top: -17px;
+    }
+
+    &:active {
+      top: -21px;
+    }
+
+    &--min {
+      right: 199px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 13px;
+    width: 13px;
+    top: -15px;
+
+    &--min {
+      right: 120px;
+    }
+
+    &:hover,
+    &:focus {
+      top: -9px;
+    }
+
+    &:active {
+      top: -12px;
+    }
+  }
+}

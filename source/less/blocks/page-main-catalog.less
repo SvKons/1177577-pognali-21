@@ -1,0 +1,34 @@
+.page-main-catalog {
+  background-color: @pale-grey;
+}
+
+.page-main-catalog__container {
+  position: relative;
+
+  margin-top: -60px;
+  padding-top: 28px;
+  padding-bottom: 46px;
+
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: @desktop-width;
+
+    margin: 0 auto;
+    padding: 0 60px;
+    padding-top: 73px;
+    padding-bottom: 76px;
+  }
+}
+
+.page-main-catalog__results {
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+
+.page-main-catalog__form-search {
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}

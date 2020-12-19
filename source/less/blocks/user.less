@@ -1,9 +1,9 @@
 .user {
+  display: flex;
   position: relative;
   list-style-type: none;
-  padding: 0;
   margin: 0;
-  display: flex;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -20,6 +20,7 @@
     height: 40px;
     border-radius: 50%;
     background-color: @mango;
+
     padding: 11px 11px;
   }
 
@@ -28,12 +29,12 @@
     height: 40px;
     border-radius: 50%;
     background-color: @lighter-mango;
+
     padding: 11px 11px;
   }
 
   &--login {
     display: block;
-    padding: 6px 39px;
     font-size: 17px;
     font-weight: bold;
     line-height: 30px;
@@ -41,6 +42,8 @@
     color: @dark-grey;
     background-color: @light-gold;
     border-radius: 25px;
+
+    padding: 6px 39px;
   }
 
   &--tel:hover,

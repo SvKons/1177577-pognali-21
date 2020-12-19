@@ -1,52 +1,161 @@
 .trip {
   width: 270px;
-  margin: 0 auto;
-  padding: 0 25px;
-  padding-top: 23px;
-  padding-bottom: 22px;
   position: relative;
   border-radius: 10px;
   background-color: @white;
   color: @dark-slate-blue;
+
+  margin: 0 auto;
+  padding: 0 25px;
+  padding-top: 23px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 618px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+
+    margin: 0 auto;
+    padding: 0 35px;
+    padding-top: 25px;
+    padding-bottom: 18px;
+    padding-right: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 97px;
+      left: 0;
+      width: 618px;
+      height: 1px;
+      background-color: @pale-grey;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1256px;
+      border-radius: 10px;
+      align-items: center;
+
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 23px;
+      padding-bottom: 24px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .trip__name {
   position: relative;
-  margin: 0;
   font-weight: bold;
   line-height: 16px;
+
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+
+    padding-right: 365px;
+
+    &--pr {
+      padding-right: 333px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 300px;
+
+    padding: 0;
+  }
 }
 
 .trip__name span {
   font-weight: 500;
   letter-spacing: 1.6px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 38px;
+  }
 }
 
 .trip__quantity,
 .trip__date {
-  margin: 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 }
 
 .trip__quantity {
   margin-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 287px;
+  }
 }
 
 .trip__date {
   margin-top: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 41px;
+    margin-left: 44px;
+
+    &--ml {
+      margin-left: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 39px;
+
+    &--ml {
+      margin-left: 50px;
+    }
+  }
 }
 
 .trip__link {
-  margin-top: 21px;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   letter-spacing: 1.4px;
   color: @black-opacity30;
+
+  margin-top: 21px;
 
   &:hover,
   &:focus {
@@ -55,5 +164,19 @@
 
   &:active {
     color: @black-opacity10;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    margin-top: 41px;
+    margin-left: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: auto;
   }
 }

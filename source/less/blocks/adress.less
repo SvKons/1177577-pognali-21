@@ -4,14 +4,16 @@
   background-color: @light-gold;
   position: relative;
   z-index: 2;
+
   margin-top: -74px;
 }
 
 .adress__container {
-  padding-top: 107px;
-  padding-bottom: 35px;
   position: relative;
   z-index: 2;
+
+  padding-top: 107px;
+  padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     padding-top: 121px;
@@ -19,31 +21,33 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 126px;
-    padding-bottom: 56px;
     display: flex;
     align-items: baseline;
+
+    padding-top: 126px;
+    padding-bottom: 56px;
   }
 }
 
 .adress__name {
   position: relative;
-  margin: 0;
-  padding-left: 61px;
-  padding-right: 66px;
   font-weight: bold;
   text-transform: uppercase;
   color: @dark-blue-grey;
 
+  margin: 0;
+  padding-left: 61px;
+  padding-right: 66px;
+
   &::before {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
     background-color: @dark-blue-grey;
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 50%;
     background-image: url("../img/contacts-location.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -51,11 +55,12 @@
   }
 
   @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+
     padding-left: 129px;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 28px;
-    line-height: 28px;
 
     &::before {
       width: 68px;
@@ -81,17 +86,18 @@
 
 .adress__link {
   position: relative;
-  margin-top: 31px;
-  padding: 19px 21px;
-  background-color: transparent;
-  border: 3px solid @dark-blue-grey;
-  border-radius: 10px;
-  color: @dark-blue-grey;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
   text-align: left;
+  background-color: transparent;
+  color: @dark-blue-grey;
   text-transform: none;
+  border: 3px solid @dark-blue-grey;
+  border-radius: 10px;
+
+  margin-top: 31px;
+  padding: 19px 21px;
 
   &::before {
     content: "";
@@ -105,13 +111,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0 35px;
-    margin-top: 44px;
-    padding: 25px 34px;
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
     border-radius: 20px;
+
+    margin: 0 35px;
+    margin-top: 44px;
+    padding: 25px 34px;
 
     &::before {
       top: 30px;
@@ -120,8 +127,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 324px;
+
     margin: 0;
     margin-left: 83px;
-    width: 324px;
   }
 }

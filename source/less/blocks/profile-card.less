@@ -1,20 +1,72 @@
 .profile-card {
   width: 270px;
+  position: relative;
+  background-color: @white;
+  border-radius: 20px;
+
   margin: 0 auto;
   padding: 0 20px;
   padding-top: 13px;
   padding-bottom: 22px;
-  position: relative;
-  background-color: @white;
-  border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+
+    margin: 0 auto;
+    padding: 0 35px;
+    padding-top: 32px;
+    padding-bottom: 21px;
+    padding-right: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 950px;
+
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .profile-card__content {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 665px;
+
+    padding-top: 45px;
+    padding-bottom: 27px;
+    padding-left: 59px;
+    padding-right: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 187px;
+      top: 41px;
+      left: 345px;
+      background-image: linear-gradient(to bottom, transparent 5%, @pale-grey 10%, @pale-grey 90%, transparent 95%);
+    }
+  }
 }
 
 .profile-card:not(:first-child) {
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
+  }
 }
 
 .profile-card__link-img {
@@ -31,10 +83,41 @@
   left: 18px;
   z-index: 2;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    width: 190px;
+    height: 190px;
+    top: 35px;
+    left: 35px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+    width: 285px;
+    height: 285px;
+    top: 0;
+    left: 0;
+  }
 }
 
 .profile-card__info {
   padding-right: 50px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+
+    padding-left: 223px;
+    padding-right: 140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .profile-card__name {
@@ -43,12 +126,13 @@
   color: @dark-slate-blue;
   position: relative;
   display: block;
-  margin: 0;
-  padding-left: 85px;
-  padding-right: 143px;
   line-height: 20px;
   text-decoration: none;
   cursor: pointer;
+
+  margin: 0;
+  padding-left: 85px;
+  padding-right: 143px;
 
   &::before {
     width: 6px;
@@ -73,21 +157,59 @@
   &:active {
     color: @dark-slate-blue-opacity30;
   }
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 30px;
+
+    padding: 0;
+    padding-right: 30px;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+      right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      right: unset;
+      left: -26px;
+    }
+  }
 }
 
 .profile-card__interests {
-  margin: 0;
-  margin-top: 46px;
-  padding-left: 6px;
   font-size: 15px;
   line-height: 18px;
   color: @greyish-brown;
+
+  margin: 0;
+  margin-top: 46px;
+  padding-left: 6px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-top: 17px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 250px;
+
+    padding-left: 3px;
+  }
 }
 
 .profile-card__place {
+  z-index: 1;
+
   margin-top: 12px;
   padding-left: 7px;
-  z-index: 1;
 
   &--twoflags {
     padding-bottom: 6px;
@@ -114,13 +236,54 @@
     z-index: -1;
     background-color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+
+    margin-top: 20px;
+    padding: 0;
+
+    &--twoflags {
+      margin-top: 22px;
+      padding-bottom: 2px;
+    }
+
+    &::before {
+      width: 690px;
+      left: -36px;
+    }
+
+    &::after {
+      left: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    margin: 0;
+    margin-left: 80px;
+    margin-top: 2px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &--twoflags {
+      margin-top: 2px;
+    }
+  }
 }
 
 .profile-card__wrapper {
   display: flex;
-  margin-top: 10px;
   position: relative;
   z-index: 1;
+
+  margin-top: 10px;
 
   &::before {
     content: "";
@@ -132,26 +295,62 @@
     z-index: -1;
     background-color: @pale-grey;
   }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    order: 6;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    right: 0;
+    order: 5;
+    flex-direction: row;
+
+    margin: 0;
+    margin-left: auto;
+    margin-top: 0;
+  }
 }
 
 .profile-card__transport-list {
   margin-top: 14px;
-}
 
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
 
 .profile-card__transport-item {
   width: 33px;
   height: 33px;
   background-color: @pale-grey;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+
+    padding: 4px 5px;
+  }
 }
 
 .profile-card__transport-title {
-  margin: 0;
-  padding-left: 7px;
-  padding-top: 2px;
   font-size: 15px;
   line-height: 18px;
   color: @greyish-brown;
+
+  margin: 0;
+  padding-left: 7px;
+  padding-top: 2px;
 
   &::after {
     content: "";
@@ -163,21 +362,39 @@
     z-index: -1;
     background-color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .profile-card__level {
   margin: 0;
   margin-left: 50px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+
+    margin-left: 0;
+    margin-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 42px;
+  }
 }
 
 .profile-card__level-title {
+  font-size: 15px;
+  line-height: 18px;
+  color: @greyish-brown;
+
   margin: 0;
   margin-bottom: 9px;
   padding-left: 7px;
   padding-top: 2px;
-  font-size: 15px;
-  line-height: 18px;
-  color: @greyish-brown;
 
   &::after {
     content: "";
@@ -189,31 +406,73 @@
     z-index: -1;
     background-color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .profile-card__level-wrap {
   position: relative;
   width: 45px;
   height: 45px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .profile-card__call {
   display: flex;
   align-items: center;
+
   margin-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+
+    margin-top: 47px;
+    padding-left: 220px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 4;
+
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .profile-card__link {
-  padding: 5px 79px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
   text-align: center;
-  border-radius: 20px;
   color: @dark-grey;
+  border-radius: 20px;
+
+  padding: 5px 79px;
 
   &:active {
     color: @dark-grey-opacity30;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    border-radius: 25px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-left: 28px;
+    padding-right: 34px;
   }
 }
 
@@ -224,4 +483,10 @@
   left: 47px;
   top: 42px;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
 }

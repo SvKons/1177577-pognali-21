@@ -1,19 +1,35 @@
 .show {
   margin-top: 17px;
   margin-bottom: 61px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 950px;
+
+    margin: 0;
+    padding-top: 63px;
+    padding-bottom: 117px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .show__button {
   position: relative;
   display: block;
-  margin: 0 60px;
-  padding-left: 33px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
   color: @dark-slate-blue;
   background-color: transparent;
   border: none;
+
+  margin: 0 60px;
+  padding-left: 33px;
 
   &::before,
   &::after {
@@ -50,15 +66,52 @@
   &:active::after {
     background-color: @dark-slate-blue-opacity30;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+
+    margin: 0 247px;
+    padding-left: 52px;
+
+    &::before,
+    &::after {
+      width: 27px;
+      height: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 344px;
+    padding-left: 49px;
+  }
 }
 
 .show__list {
   display: flex;
   list-style-type: none;
+
   margin: 0;
   margin-top: 20px;
   padding: 0;
   padding-bottom: 46px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    background-color: @white;
+    border-radius: 20px;
+
+    margin-top: 48px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 950px;
+
+    margin-top: 67px;
+  }
 }
 
 .show__link {
@@ -128,6 +181,48 @@
   &--previous:active::before {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: @dark-grey;
+    background-color: transparent;
+
+    &--active {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: @light-gold;
+    }
+
+    &--switch {
+      width: 30px;
+      height: 50px;
+      padding: 0;
+    }
+
+    &--next::before {
+      left: 25px;
+    }
+
+    &--previous::before {
+      left: 13px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--next::before {
+      left: 16px;
+    }
+
+    &--previous::before {
+      left: 4px;
+    }
+  }
 }
 
 .show__item {
@@ -139,5 +234,16 @@
 
   &--next {
     margin-right: 1px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--page {
+      display: block;
+    }
+
+    &--next {
+      margin-right: 25px;
+      margin-left: auto;
+    }
   }
 }

@@ -8,21 +8,47 @@
 .place__title {
   position: relative;
   z-index: 1;
-  margin: 0;
   color: @greyish-brown;
+
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .place__list {
+  list-style-type: none;
+
+  margin-top: 17px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  margin-top: 17px;
 
   &--index {
     position: relative;
-    margin-top: -13px;
     display: flex;
     z-index: 2;
+
+    margin-top: -13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    margin: 0;
+
+    &--index {
+      display: flex;
+    }
   }
 }
 
@@ -36,16 +62,39 @@
   &--index:not(:first-child) {
     margin-left: 20px;
   }
+
+  @media (min-width: @tablet-width) {
+    &--catalog:not(:nth-child(3n+1)) {
+      margin-top: 0;
+      margin-left: 28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--catalog:not(:first-child) {
+      margin: 0;
+      margin-top: 7px;
+    }
+  }
 }
 
 .place__name {
-  margin: 0;
-  margin-left: 12px;
   font-weight: 500;
   text-transform: uppercase;
+  margin: 0;
+  margin-left: 12px;
 
   &--index {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 19px;
   }
 }
 
@@ -54,6 +103,11 @@
   height: 18px;
 
   &--index {
+    width: 35px;
+    height: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
     width: 35px;
     height: 26px;
   }

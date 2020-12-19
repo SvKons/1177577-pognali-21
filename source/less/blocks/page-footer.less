@@ -4,8 +4,8 @@
   border-top-right-radius: 20px;
   position: relative;
   z-index: 2;
-  margin-top: -60px;
   background-color: @white;
+  margin-top: -60px;
 
   &--index {
     margin-top: -232px;
@@ -18,11 +18,22 @@
   @media (min-width: @tablet-width) {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+
     margin-top: -114px;
 
     &--index {
       width: 100%;
       margin-top: -154px;
+    }
+
+    &--form {
+      width: 100%;
+      margin-top: -154px;
+    }
+
+    &--catalog {
+      width: 100%;
+      margin: 0;
     }
   }
 
@@ -30,6 +41,16 @@
     margin-top: -115px;
 
     &--index {
+      width: 100%;
+      margin: 0;
+    }
+
+    &--form {
+      width: 100%;
+      margin: 0;
+    }
+
+    &--catalog {
       width: 100%;
       margin: 0;
     }
@@ -41,30 +62,33 @@
   padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 48px;
-    padding-bottom: 46px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 48px;
+    padding-bottom: 46px;
   }
 }
 
 .page-footer__logo {
   display: block;
-  margin-left: 50%;
   transform: translateX(-50%);
 
+  margin-left: 50%;
+
   @media (min-width: @tablet-width) {
-    margin: 0;
     transform: translateX(0);
+
+    margin: 0;
   }
 }
 
 .page-footer__logo-image {
   display: block;
-  margin: 0 auto;
   width: 100px;
   height: 19px;
+
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -73,14 +97,16 @@
 }
 
 .page-footer__socials-list {
-  margin-top: 37px;
-  margin-left: 50%;
   transform: translateX(-50%);
 
+  margin-top: 37px;
+  margin-left: 50%;
+
   @media (min-width: @tablet-width) {
+    transform: translate(0);
+
     margin: 0;
     margin-left: -13px;
-    transform: translate(0);
   }
 
   @media (min-width: @desktop-width) {

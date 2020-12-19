@@ -17,11 +17,11 @@
     display: none;
 
     @media (min-width: @desktop-width) {
+      display: block;
       width: 50px;
       height: 50px;
       border-radius: 50%;
       background-color: @mango;
-      display: block;
       padding: 15px 16px;
     }
   }
@@ -30,17 +30,17 @@
     display: none;
 
     @media (min-width: @desktop-width) {
+      display: block;
       width: 50px;
       height: 50px;
       border-radius: 50%;
       background-color: @lighter-mango;
+
       padding: 15px 16px;
-      display: block;
     }
   }
 
   &--login {
-    padding: 10px 30px;
     font-size: 17px;
     font-weight: bold;
     line-height: 30px;
@@ -48,6 +48,8 @@
     color: @dark-grey;
     background-color: @light-gold;
     border-radius: 25px;
+
+    padding: 10px 30px;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
