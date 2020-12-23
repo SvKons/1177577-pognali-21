@@ -88,20 +88,28 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/logo-mobile-b.png");
+    background-image: url("../img/logo-mobile-blue@1x.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/logo-mobile-blue@2x.png");
+    }
   }
 
   @media (min-width: @tablet-width) {
     &::after {
-      background-image: url("../img/logo-tablet-b.png");
+      background-image: url("../img/logo-tablet-blue@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/logo-tablet-blue@2x.png");
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
     &::after {
-      background-image: url("../img/logo-desktop-b.png");
+      background-image: url("../img/logo-desktop-blue@1x.png");
     }
   }
 }
@@ -109,7 +117,11 @@
 .main-navigation--open .main-navigation__logo {
   @media (min-width: @desktop-width) {
     &::after {
-      background-image: url("../img/logo-desktop-w.png");
+      background-image: url("../img/logo-desktop-white@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/logo-desktop-blue@2x.png");
+      }
     }
   }
 }

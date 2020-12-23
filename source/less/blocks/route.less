@@ -24,13 +24,17 @@
   padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/flags-back.png");
+    background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: 439px 142px;
     background-size: 289px 575px;
 
     padding-top: 131px;
     padding-bottom: 80px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -41,6 +45,10 @@
 
     padding-top: 225px;
     padding-bottom: 139px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 }
 
