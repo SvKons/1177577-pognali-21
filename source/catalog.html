@@ -38,7 +38,7 @@
             <li class="login__item">
               <a class="login__link login__link--tel button" href="tel:+78005558628" aria-label="Позвонить">
                 <svg class="login__icon" width="18" height="18">
-                  <use xlink:href="#"></use>
+                  <use xlink:href="img/sprite.svg#phonelogin"></use>
                 </svg>
                 <span class="visually-hidden">8 800 555-86-28</span>
               </a>
@@ -46,7 +46,7 @@
             <li class="login__item">
               <a class="login__link login__link--email button" href="#" aria-label="Написать">
                 <svg class="login__icon" width="18" height="14">
-                  <use xlink:href="#"></use>
+                  <use xlink:href="img/sprite.svg#mailmenu"></use>
                 </svg>
                 <span class="visually-hidden">mail@htmlacademy.ru</span>
               </a>
@@ -57,25 +57,48 @@
           </ul>
 
           <div class="main-navigation__wrapper">
+            <ul class="main-navigation__contacts contacts contacts--navigation">
+              <li class="contacts__item contacts__item--navigation">
+                <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628" aria-label="Позвонить">
+                  <div class="contacts__wrapper contacts__wrapper--navigation">
+                    <svg class="contacts__icon" width="18" height="18">
+                      <use xlink:href="img/sprite.svg#phonemenu"></use>
+                    </svg>
+                  </div>
+                  <span>8 800 555-86-28</span>
+                </a>
+              </li>
+              <li class="contacts__item contacts__item--navigation">
+                <a class="contacts__link contacts__link--navigation button" href="#" aria-label="Написать">
+                  <div class="contacts__wrapper contacts__wrapper--navigation">
+                    <svg class="contacts__icon" width="18" height="14">
+                      <use xlink:href="img/sprite.svg#mailmenu"></use>
+                    </svg>
+                  </div>
+                  <span>mail@htmlacademy.ru</span>
+                </a>
+              </li>
+            </ul>
+
             <ul class="main-navigation__socials socials-list socials-list--navigation">
               <li class="socials-list__item socials-list__item--navigation">
                 <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
                   <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11" height="21">
-                    <use xlink:href="#"></use>
+                    <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-list__item socials-list__item--navigation">
                 <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
                   <svg class="socials-list__icon socials-list__icon--vk socials-list__icon--navigation" width="23" height="12">
-                    <use xlink:href="#"></use>
+                    <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-list__item socials-list__item--navigation">
                 <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
                   <svg class="socials-list__icon socials-list__icon--inst socials-list__icon--navigation" width="18" height="18">
-                    <use xlink:href="#"></use>
+                    <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
                 </a>
               </li>
@@ -783,16 +806,16 @@
                 <label class="transport__label" for="plane">
                   <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane" aria-label="Самолет" checked>
                   <svg class="transport__icon transport__icon--plane" width="14" height="16">
-                    <use class="transport__use" xlink:href="#"></use>
+                    <use class="transport__use" xlink:href="img/sprite.svg#plane" fill="currentColor"></use>
                   </svg>
                 </label>
               </li>
-              <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--train">
+              <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--bus">
                 <span class="visually-hidden">Автотранспорт</span>
                 <label class="transport__label" for="train">
-                  <input class="transport__control visually-hidden" type="checkbox" id="train" name="train" aria-label="Автотранспорт" checked>
-                  <svg class="transport__icon transport__icon--train" width="13" height="16">
-                    <use class="transport__use" xlink:href="#"></use>
+                  <input class="transport__control visually-hidden" type="checkbox" id="train" name="bus" aria-label="Автотранспорт" checked>
+                  <svg class="transport__icon transport__icon--bus" width="13" height="16">
+                    <use class="transport__use" xlink:href="img/sprite.svg#bus" fill="currentColor"></use>
                   </svg>
                 </label>
               </li>
@@ -801,7 +824,7 @@
                 <label class="transport__label" for="bike">
                   <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike" aria-label="Велосипед">
                   <svg class="transport__icon transport__icon--bicycle" width="19" height="17">
-                    <use class="transport__use" xlink:href="#"></use>
+                    <use class="transport__use" xlink:href="img/sprite.svg#bike" fill="currentColor"></use>
                   </svg>
                 </label>
               </li>
@@ -810,7 +833,7 @@
                 <label class="transport__label" for="run">
                   <input class="transport__control visually-hidden" type="checkbox" id="run" name="run" aria-label="Пешком" checked>
                   <svg class="transport__icon transport__icon--walking" width="15" height="17">
-                    <use class="transport__use" xlink:href="#"></use>
+                    <use class="transport__use" xlink:href="img/sprite.svg#run" fill="currentColor"></use>
                   </svg>
                 </label>
               </li>
@@ -894,25 +917,25 @@
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train">
-                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
-                          <use xlink:href="#"></use>
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bus">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bus" width="13" height="16">
+                          <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--bicycle" width="19" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
                       </li>
@@ -923,7 +946,7 @@
                     <p class="profile-card__level-title level__title">Левел</p>
                     <div class="profile-card__level-wrap">
                     <svg class="level__round">
-                      <use xlink:href="#"></use>
+                      <use xlink:href="img/sprite.svg#level"></use>
                     </svg>
                     <div class="level__content level__content--catalog">
                       <div class="level__name level__name--catalog">
@@ -939,7 +962,7 @@
                   <div class="profile-card__like like">
                     <button class="like__button like__button--active" type="button" aria-label="Поставить like">
                       <svg class="like__icon" width="20" height="17">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/sprite.svg#heartactive"></use>
                       </svg>
                     </button>
                     <p class="like__number">1,5 м</p>
@@ -989,25 +1012,25 @@
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train transport__item--on">
-                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
-                          <use xlink:href="#"></use>
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bus transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bus" width="13" height="16">
+                          <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--bicycle" width="19" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
                       </li>
@@ -1017,7 +1040,7 @@
                     <p class="profile-card__level-title level__title">Левел</p>
                     <div class="profile-card__level-wrap">
                     <svg class="level__round">
-                      <use xlink:href="#"></use>
+                      <use xlink:href="img/sprite.svg#level"></use>
                     </svg>
                     <div class="level__content level__content--catalog">
                       <div class="level__name level__name--catalog">
@@ -1033,7 +1056,7 @@
                   <div class="profile-card__like like">
                     <button class="like__button" type="button" aria-label="Поставить like">
                       <svg class="like__icon" width="20" height="17">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/sprite.svg#heart"></use>
                       </svg>
                     </button>
                     <p class="like__number">1500</p>
@@ -1088,25 +1111,25 @@
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train">
-                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
-                          <use xlink:href="#"></use>
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bus">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bus" width="13" height="16">
+                          <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon" width="19" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
                       </li>
@@ -1116,7 +1139,7 @@
                     <p class="profile-card__level-title level__title">Левел</p>
                     <div class="profile-card__level-wrap">
                     <svg class="level__round">
-                      <use xlink:href="#"></use>
+                      <use xlink:href="img/sprite.svg#level"></use>
                     </svg>
                     <div class="level__content level__content--catalog">
                       <div class="level__name level__name--catalog">
@@ -1131,7 +1154,7 @@
                   <div class="profile-card__like like">
                     <button class="like__button" type="button" aria-label="Поставить like">
                       <svg class="like__icon" width="20" height="17">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/sprite.svg#heart"></use>
                       </svg>
                     </button>
                     <p class="like__number">170</p>
@@ -1180,25 +1203,25 @@
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
-                          <use xlink:href="№"></use>
+                          <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train transport__item--on">
-                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
-                          <use xlink:href="#"></use>
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bus transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bus" width="13" height="16">
+                          <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--bicycle" width="19" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
-                          <use xlink:href="#"></use>
+                          <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
                       </li>
@@ -1208,7 +1231,7 @@
                     <p class="profile-card__level-title level__title">Левел</p>
                     <div class="profile-card__level-wrap">
                       <svg class="level__round">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/sprite.svg#level"></use>
                       </svg>
                       <div class="level__content level__content--catalog">
                         <div class="level__name level__name--catalog">
@@ -1224,7 +1247,7 @@
                   <div class="profile-card__like like">
                     <button class="like__button" type="button" aria-label="Поставить like">
                       <svg class="like__icon" width="20" height="17">
-                        <use xlink:href="#"></use>
+                        <use xlink:href="img/sprite.svg#heart"></use>
                       </svg>
                     </button>
                     <p class="like__number">23</p>
@@ -1283,21 +1306,21 @@
         <li class="socials-list__item socials-list__item--round">
           <a class="socials-list__link socials-list__link--round socials-list__link--fb" href="#" aria-label="Фейсбук">
             <svg class="socials-list__icon socials-list__icon--fb" width="11" height="21">
-              <use xlink:href="#"></use>
+              <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
           </a>
         </li>
         <li class="socials-list__item socials-list__item--round">
           <a class="socials-list__link socials-list__link--round socials-list__link--vk" href="#" aria-label="ВКонтакте">
             <svg class="socials-list__icon socials-list__icon--vk" width="23" height="12">
-              <use xlink:href="#"></use>
+              <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="socials-list__item socials-list__item--round">
           <a class="socials-list__link socials-list__link--round socials-list__link--instagram" href="#" aria-label="Инстаграм">
             <svg class="socials-list__icon socials-list__icon--inst" width="18" height="18">
-              <use xlink:href="#"></use>
+              <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
           </a>
         </li>
@@ -1307,7 +1330,7 @@
         <p class="copyright__by">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
           <svg class="copyright__icon" width="27" height="34">
-            <use xlink:href="#"></use>
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
       </div>
