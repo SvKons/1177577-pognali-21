@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Светлана Константинова](https://up.htmlacademy.ru/adaptive/21/user/1177577).
-* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien)].
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
