@@ -1,31 +1,29 @@
 .adress {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  .border-bottom-radius (30px, 30px);
   background-color: @light-gold;
   position: relative;
   z-index: 2;
 
   margin-top: -74px;
+
+  @media (min-width: @tablet-width) {
+    .border-bottom-radius (60px, 60px);
+  }
 }
 
 .adress__container {
+  .vertical-paddings (105px, 35px);
   position: relative;
   z-index: 2;
 
-  padding-top: 107px;
-  padding-bottom: 35px;
-
   @media (min-width: @tablet-width) {
-    padding-top: 121px;
-    padding-bottom: 85px;
+    .vertical-paddings (121px, 82px);
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (126px, 56px);
     display: flex;
     align-items: baseline;
-
-    padding-top: 126px;
-    padding-bottom: 56px;
   }
 }
 
@@ -40,14 +38,11 @@
   padding-right: 66px;
 
   &::before {
-    width: 45px;
-    height: 45px;
-    background-color: @dark-blue-grey;
+    .round (45px, 45px, 50%,  @dark-blue-grey);
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 50%;
     background-image: url("../img/contacts-location.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -55,12 +50,11 @@
   }
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings (20px, 20px);
     font-size: 28px;
     line-height: 28px;
 
     padding-left: 129px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 
     &::before {
       width: 68px;
@@ -71,9 +65,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (32px, 32px);
     padding-left: 344px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     &::before {
       width: 90px;
@@ -85,6 +78,8 @@
 }
 
 .adress__link {
+  display: flex;
+  align-items: center;
   position: relative;
   font-size: 18px;
   font-weight: bold;
@@ -96,18 +91,16 @@
   border: 3px solid @dark-blue-grey;
   border-radius: 10px;
 
-  margin-top: 31px;
-  padding: 19px 21px;
+  margin-top: 35px;
+  padding: 17px 20px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 21px;
-    right: 20px;
-    width: 10px;
-    height: 14px;
-    background-image: url("../img/triangle-arrow-right.svg");
-    background-repeat: no-repeat;
+  &:hover .adress__icon {
+    fill: @white;
+  }
+
+  &:active .adress__icon {
+    fill: @white;
+    opacity: 0.7;
   }
 
   @media (min-width: @tablet-width) {
@@ -117,8 +110,8 @@
     border-radius: 20px;
 
     margin: 0 35px;
-    margin-top: 44px;
-    padding: 25px 34px;
+    margin-top: 45px;
+    padding: 23px 34px;
 
     &::before {
       top: 30px;
@@ -131,5 +124,14 @@
 
     margin: 0;
     margin-left: 83px;
+  }
+}
+
+.adress__wrapper {
+  margin-left: auto;
+  padding-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
   }
 }

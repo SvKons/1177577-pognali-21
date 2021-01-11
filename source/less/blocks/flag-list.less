@@ -3,7 +3,12 @@
   list-style-type: none;
 
   margin: 0;
+  margin-top: 3px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .flag-list__item:not(:first-child) {

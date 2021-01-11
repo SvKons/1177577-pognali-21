@@ -7,13 +7,25 @@
   background-color: transparent;
 
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 2px;
 
   &--open::before {
     content: "";
     position: absolute;
     width: 24px;
     height: 3px;
+    top: 22px;
+    right: 0;
+    background-image: url("../img/dots.svg");
+    background-repeat: no-repeat;
+    background-size: 66px 3px;
+  }
+
+  &--open-filters::before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 6px;
     top: 27px;
     right: 0;
     background-image: url("../img/dots.svg");
@@ -43,6 +55,8 @@
     width: 200px;
     height: 24px;
 
+    margin: 0;
+    margin-left: auto;
     padding-right: 27px;
 
     &--open::before {
@@ -50,6 +64,18 @@
       height: 3px;
       top: 16px;
       background-size: 88px 5px;
+    }
+
+    &--open-filters::before {
+      content: "";
+      position: absolute;
+      width: 77px;
+      height: 6px;
+      top: 12px;
+      right: 0;
+      background-image: url("../img/dots.svg");
+      background-repeat: no-repeat;
+      background-size: 104px 6px;
     }
 
     &--close {
@@ -76,15 +102,15 @@
     color: @dark-blue-grey;
 
     margin: 0;
-    padding-right: 20px;
+    padding-right: 18px;
 
     &--open {
       display: none;
     }
 
     &--close {
-      padding-right: 57px;
       display: block;
+      padding-right: 57px;
     }
 
     &--page-body {

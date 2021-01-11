@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="page-body">
+<body class="page-body page-body--catalog">
   <header class="page-header page-header--catalog page-body__page-header">
-    <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index page-body__main-navigation">
+    <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--catalod  page-body__main-navigation">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
@@ -29,9 +29,21 @@
           </div>
 
           <ul class="main-navigation__site-list site-list">
-            <li class="site-list__item"><a class="site-list__link site-list__link--current main-navigation__site-link" href="#" aria-label="О сервисе">О сервисе</a></li>
-            <li class="site-list__item"><a class="site-list__link main-navigation__site-link" href="form.html" aria-label="Направления">Направления</a></li>
-            <li class="site-list__item"><a class="site-list__link main-navigation__site-link" href="catalog.html" aria-label="Попутчики">Попутчики</a></li>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link site-list__link--current button button--list main-navigation__site-link" href="#" aria-label="О сервисе">
+                <span data-hover="О сервисе">О сервисе</span>
+              </a>
+            </li>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link button button--list main-navigation__site-link" href="form.html" aria-label="Направления">
+                <span data-hover="Направления">Направления</span>
+              </a>
+            </li>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link button button--list main-navigation__site-link" href="catalog.html" aria-label="Попутчики">
+                <span data-hover="Попутчики">Попутчики</span>
+              </a>
+            </li>
           </ul>
 
           <ul class="main-navigation__login login">
@@ -112,7 +124,7 @@
   <main class="page-main page-main-catalog">
 
     <section class="page-main__title page-main-catalog__title title">
-      <div class="title__container container">
+      <div class="title__container title__container--catalog container">
         <h1 class="title__name">Попутчики</h1>
         <a class="title__link button" href="index.html" aria-label="Вернуться на главную страницу">На главную</a>
       </div>
@@ -121,7 +133,7 @@
     <section class="page-main__country-filters page-main-catalog__country-filters country-filters">
       <div class="country-filters__container country-filters__container--close container">
         <h2 class="country-filters__name">Фильтрация по странам</h2>
-        <button class="country-filters__toggler toggler toggler--close button page-body__toggler" type="button" aria-label="Переключить фильтр стран">
+        <button class="country-filters__toggler toggler toggler--open toggler--open-filters button page-body__toggler" type="button" aria-label="Переключить фильтр стран">
           <span class="toggler__text toggler__text--open page-body__text page-body__text--open">Показать все</span>
           <span class="toggler__text toggler__text--close page-body__text page-body__text--close">Свернуть</span>
         </button>
@@ -655,7 +667,7 @@
                 <a class="country-choice__name" aria-label="Украина" href="#">Украина</a>
               </li>
               <li class="country-choice__item">
-                <a class="country-choice__name" aria-label="Уругвай" href="#">Уругвайя</a>
+                <a class="country-choice__name" aria-label="Уругвай" href="#">Уругвай</a>
               </li>
             </ul>
             <ul class="country-choice__list country-choice__list--19">
@@ -718,9 +730,9 @@
               </li>
             </ul>
             <ul class="country-choice__list country-choice__list--bottom country-choice__list--24">
-              <li class="country-choice__item">
+              <li class="country-choice__item country-choice__item--24">
                 <a class="country-choice__name" aria-label="ЮАР" href="#">ЮАР</a></li>
-              <li class="country-choice__item">
+              <li class="country-choice__item country-choice__item--24">
                 <a class="country-choice__name" aria-label="Южный судан" href="#">Южный Судан</a>
               </li>
             </ul>
@@ -738,8 +750,8 @@
       </div>
     </section>
 
-    <div class="page-main__container page-main-catalog__container">
-      <aside class="page-main__form-search page-main-catalog__form-search form-search form-search__container">
+    <div class="page-main__container page-main__container--catalog">
+      <aside class="page-main__form-search page-main__form-search--container form-search form-search__container">
         <form class="form-search__form traveler-search" method="get" action="https://echo.htmlacademy.ru">
           <h2 class="traveler-search__title">Подберите идеального попутчика</h2>
 
@@ -862,7 +874,7 @@
         </form>
       </aside>
 
-      <section class="page-main__results page-main-catalog__results results">
+      <section class="page-main__results page-main__results--catalog results">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <div class="results__container">
           <ul class="results__list">
@@ -876,7 +888,7 @@
                   <source srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                  <img class="profile-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobail@2x.jpg 2x" alt="Фото профиля">
+                  <img class="profile-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobail@2x.jpg 2x" width="285" height="285" alt="Фото профиля">
                 </picture>
 
               </a>
@@ -886,7 +898,7 @@
                   <p class="profile-card__interests">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 </div>
                 <div class="profile-card__place place">
-                  <p class="place__title">Хочет посетить</p>
+                  <p class="place__title">хочет посетить</p>
 
                   <ul class="place__list">
                     <li class="place__item place__item--catalog country">
@@ -912,7 +924,7 @@
 
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="profile-card__transport-title transport__title transport__title--catalog">Транспорт</p>
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
 
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
@@ -943,7 +955,7 @@
                   </div>
 
                   <div class="profile-card__level level level--catalog level--99">
-                    <p class="profile-card__level-title level__title">Левел</p>
+                    <p class="profile-card__level-title level__title">левел</p>
                     <div class="profile-card__level-wrap">
                     <svg class="level__round">
                       <use xlink:href="img/sprite.svg#level"></use>
@@ -980,17 +992,17 @@
                   <source srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                  <img class="profile-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Фото профиля">
+                  <img class="profile-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="285" height="285" alt="Фото профиля">
                 </picture>
 
               </a>
-              <div class="profile-card__content">
+              <div class="profile-card__content profile-card__content--two">
                 <div class="profile-card__info">
                   <a class="profile-card__name profile-card__name--round2" href="#" aria-label="Перейти в профиль">Петя Демин</a>
                     <p class="profile-card__interests">#бургер #бар #футбол #концерт #крафт</p>
                 </div>
                 <div class="profile-card__place profile-card__place--two-flags place">
-                  <p class="place__title">Хочет посетить</p>
+                  <p class="place__title">хочет посетить</p>
                   <ul class="place__list">
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
@@ -1008,7 +1020,7 @@
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="profile-card__transport-title transport__title transport__title--catalog">Транспорт</p>
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
@@ -1037,7 +1049,7 @@
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--80">
-                    <p class="profile-card__level-title level__title">Левел</p>
+                    <p class="profile-card__level-title level__title">левел</p>
                     <div class="profile-card__level-wrap">
                     <svg class="level__round">
                       <use xlink:href="img/sprite.svg#level"></use>
@@ -1052,7 +1064,7 @@
                   </div>
                 </div>
                 <div class="profile-card__call">
-                  <a class="profile-card__link button button--bg" href="#" aria-label="Позвать!">Позвать</a>
+                  <a class="profile-card__link button button--bg" href="#" aria-label="Позвать!">Позвать!</a>
                   <div class="profile-card__like like">
                     <button class="like__button" type="button" aria-label="Поставить like">
                       <svg class="like__icon" width="20" height="17">
@@ -1073,17 +1085,17 @@
                   <source srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-                  <img class="profile-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Фото профиля">
+                  <img class="profile-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="285" height="285" alt="Фото профиля">
                 </picture>
 
               </a>
-              <div class="profile-card__content">
+              <div class="profile-card__content profile-card__content--three">
                 <div class="profile-card__info">
                   <a class="profile-card__name profile-card__name--round3" href="#" aria-label="Перейти в профиль">Марк Смолов</a>
                     <p class="profile-card__interests">#рэп #тату #хайпбист #кроссовки #суприм</p>
                 </div>
                 <div class="profile-card__place place">
-                  <p class="place__title">Хочет посетить</p>
+                  <p class="place__title">хочет посетить</p>
                   <ul class="place__list">
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
@@ -1101,13 +1113,13 @@
                       <div class="place__flag flag">
                         <img class="flag__img" src="img/flag-dominica.svg" width="35" height="24" alt="Флаг Доминиканы">
                       </div>
-                      <p class="place__name">Доминикана</p>
+                      <p class="place__name">Доминика</p>
                     </li>
                   </ul>
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="profile-card__transport-title transport__title transport__title--catalog">Транспорт</p>
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
@@ -1136,7 +1148,7 @@
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--25">
-                    <p class="profile-card__level-title level__title">Левел</p>
+                    <p class="profile-card__level-title level__title">левел</p>
                     <div class="profile-card__level-wrap">
                     <svg class="level__round">
                       <use xlink:href="img/sprite.svg#level"></use>
@@ -1171,17 +1183,17 @@
                   <source srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                  <img class="profile-card__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-desktop@2x.jpg 2x" alt="Фото профиля">
+                  <img class="profile-card__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-desktop@2x.jpg 2x" width="285" height="285" alt="Фото профиля">
                 </picture>
 
               </a>
-              <div class="profile-card__content">
+              <div class="profile-card__content profile-card__content--four">
                 <div class="profile-card__info">
                   <a class="profile-card__name profile-card__name--round4 profile-card__name--online" href="#" aria-label="Перейти в профиль">Лариса Роговая</a>
-                  <p class="profile-card__interests">#образование #карьера #учеба #линкедин</p>
+                  <p class="profile-card__interests">#образование #карьера&nbsp; #учеба #линкедин</p>
                 </div>
                 <div class="profile-card__place profile-card__place--two-flags place">
-                  <p class="place__title">Хочет посетить</p>
+                  <p class="place__title">хочет посетить</p>
                   <ul class="place__list">
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
@@ -1199,7 +1211,7 @@
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="profile-card__transport-title transport__title transport__title--catalog">Транспорт</p>
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
                     <ul class="profile-card__transport-list transport__list transport__list--catalog">
                       <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
                         <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
@@ -1228,7 +1240,7 @@
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--50">
-                    <p class="profile-card__level-title level__title">Левел</p>
+                    <p class="profile-card__level-title level__title">левел</p>
                     <div class="profile-card__level-wrap">
                       <svg class="level__round">
                         <use xlink:href="img/sprite.svg#level"></use>
@@ -1288,7 +1300,7 @@
   </main>
 
   <footer class="page-footer page-footer--catalog container">
-    <div class="page-footer__container">
+    <div class="page-footer__container page-footer__container--catalog">
       <a class="page-footer__logo" href="index.html">
 
         <picture>
@@ -1302,7 +1314,7 @@
 
       </a>
 
-      <ul class="page-footer__socials-list socials-list">
+      <ul class="page-footer__socials-list page-footer__socials-list--catalog socials-list">
         <li class="socials-list__item socials-list__item--round">
           <a class="socials-list__link socials-list__link--round socials-list__link--fb" href="#" aria-label="Фейсбук">
             <svg class="socials-list__icon socials-list__icon--fb" width="11" height="21">
@@ -1326,10 +1338,10 @@
         </li>
       </ul>
 
-      <div class="page-footer__copyright copyright">
+      <div class="page-footer__copyright copyright copyright__catalog">
         <p class="copyright__by">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
-          <svg class="copyright__icon" width="27" height="34">
+          <svg class="copyright__icon copyright__icon--academy" width="27" height="34">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>

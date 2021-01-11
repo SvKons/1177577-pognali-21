@@ -2,12 +2,23 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 0;
-  left: 0;
+  top: 14px;
+  left: 12px;
   z-index: 1;
+
+  &--index {
+    top: 17px;
+    left: 17px;
+  }
+
+  &--form {
+    top: 0;
+    left: 0;
+  }
 
   &--catalog {
     position: relative;
+    top: 2px;
   }
 
   &::before {
@@ -25,6 +36,20 @@
 
   &--index::before {
     background-color: @black-opacity60;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--index {
+      top: 23px;
+      left: 23px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--index {
+      top: 20px;
+      left: 22px;
+    }
   }
 }
 
@@ -55,7 +80,7 @@
 }
 
 .level--80 .level__round {
-  stroke-dasharray: 80, 100;
+  stroke-dasharray: 84, 100;
 }
 
 .level--50 .level__round {

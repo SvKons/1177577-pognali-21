@@ -14,7 +14,7 @@
 
   @media (min-width: @tablet-width) {
     width: 688px;
-    top: 4882px;
+    top: 4261px;
     border-radius: 30px;
     box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
 
@@ -23,7 +23,9 @@
 
   @media (min-width: @desktop-width) {
     width: 750px;
-    top: 3106px;
+    top: 3098px;
+
+    margin-left: 51%;
   }
 }
 
@@ -58,9 +60,11 @@
   padding: 0 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 92px;
     font-size: 22px;
     line-height: 1.27;
+
+    margin-top: 46px;
+    padding: 0 92px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,16 +74,19 @@
 }
 
 .tariffs-modal__item {
+  .vertical-paddings (12px, 9px);
   position: relative;
-  text-align: center;
+  text-align: left;
   border-top: 1px solid @black-opacity5;
 
-  padding-top: 15px;
-  padding-bottom: 7px;
-
   @media (min-width: @tablet-width) {
-    padding-top: 17px;
-    padding-bottom: 10px;
+    .vertical-paddings (17px, 10px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .vertical-paddings (13px, 14px);
     display: flex;
     justify-content: space-between;
   }
@@ -98,19 +105,18 @@
 }
 
 .tariffs-modal__close {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  .border-bottom-radius (20px, 20px);
+  .vertical-paddings (23px, 15px);
   width: 270px;
   font-weight: bold;
   line-height: 24px;
+  letter-spacing: 1.5px;
   border: none;
   color: @dark-slate-blue;
   background-color: @pale-grey-modal;
 
-  padding-top: 23px;
-  padding-bottom: 23px;
   margin: 0 auto;
-  margin-top: 33px;
+  margin-top: 36px;
 
   &:hover,
   &:focus {
@@ -123,18 +129,22 @@
   }
 
   @media (min-width: @tablet-width) {
-    @include border-bottom-radius (30px, 30px);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    .border-bottom-radius (22px, 22px);
     width: 688px;
     height: 108px;
-    margin-top: 51px;
     font-size: 24px;
     line-height: 1;
+    letter-spacing: -0.5px;
     text-transform: none;
+
+    margin-top: 54px;
+    padding-top: 12px;
   }
 
   @media (min-width: @desktop-width) {
     width: 750px;
+
+    margin-top: 54px;
+    padding-top: 14px;
   }
 }

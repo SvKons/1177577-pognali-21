@@ -10,6 +10,8 @@
 
     margin: 0;
     padding: 0;
+    margin-left: 18px;
+    margin-right: 18px;
   }
 }
 
@@ -42,13 +44,23 @@
 
   &--open {
     display: block;
+    margin: 0;
+    margin-top: 6px;
   }
 
   @media (min-width: @desktop-width) {
     width: 252px;
 
-    padding-top: 92px;
-    margin-bottom: 48px;
+    padding-top: 94px;
+    margin-bottom: 53px;
+
+    &--open {
+      margin-top: 0;
+    }
+
+    &--bottom {
+      padding-top: 100px;
+    }
 
     &::before {
       content: "";
@@ -105,6 +117,7 @@
 
     &--6 {
       display: block;
+      margin-left: 21px;
 
       &::before {
         content: "Е";
@@ -146,6 +159,7 @@
     &--11 {
       display: block;
       margin-bottom: 85px;
+      margin-left: 21px;
 
       &::before {
         content: "М";
@@ -186,6 +200,10 @@
 
     &--16 {
       display: block;
+      margin-left: 21px;
+      margin-bottom: 47px;
+      padding-left: 4px;
+      padding-top: 98px;
 
       &::before {
         content: "С";
@@ -194,6 +212,9 @@
 
     &--17 {
       display: block;
+      margin-bottom: 47px;
+      padding-left: 4px;
+      padding-top: 98px;
 
       &::before {
         content: "Т";
@@ -202,6 +223,9 @@
 
     &--18 {
       display: block;
+      margin-bottom: 47px;
+      padding-left: 4px;
+      padding-top: 98px;
 
       &::before {
         content: "У";
@@ -210,6 +234,9 @@
 
     &--19 {
       display: block;
+      margin-bottom: 47px;
+      padding-left: 4px;
+      padding-top: 98px;
 
       &::before {
         content: "Ф";
@@ -218,6 +245,9 @@
 
     &--20 {
       display: block;
+      margin-bottom: 47px;
+      padding-left: 4px;
+      padding-top: 98px;
 
       &::before {
         content: "Х";
@@ -226,6 +256,7 @@
 
     &--21 {
       display: block;
+      margin-left: 21px;
 
       &::before {
         content: "Ч";
@@ -263,5 +294,19 @@
         content: "Я";
       }
     }
+  }
+}
+
+.country-choice__item {
+  padding-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
+}
+
+.country-choice__item--24 {
+  @media (min-width: @desktop-width) {
+    padding-left: 5px;
   }
 }

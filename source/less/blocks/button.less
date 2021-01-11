@@ -7,6 +7,19 @@
   color: @dark-slate-blue;
   cursor: pointer;
 
+  &--list {
+    position: relative;
+    display: block;
+    font-family: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &--list:active {
+    opacity: 0.3;
+  }
+
   &--arrow::before {
     content: "";
     position: absolute;
@@ -40,11 +53,11 @@
 
   &--back:hover,
   &--back:focus {
-    opacity: 0.7;
+    opacity: 1;
   }
 
   &--back:active {
-    opacity: 0.3;
+    opacity: 0.8;
   }
 
   &--bg {
@@ -57,12 +70,40 @@
   }
 
   &--bg:active {
-    background-color: @lighter-mango;
+    opacity: 0.7;
+  }
+
+  &--map:hover {
+    color: @white;
+    background-color: @darker-blue;
+  }
+
+  &--map:active {
+    background-color: @darker-blue;
+  }
+
+  &--map:active span {
+    opacity: 0.7;
   }
 
   @media (min-width: @tablet-width) {
     &--submit::before {
       display: block;
+    }
+
+    &--back::before {
+      left: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--list {
+      color: @white;
+    }
+
+    &--back::before {
+      top: 31px;
+      left: 22px;
     }
   }
 }

@@ -1,0 +1,33 @@
+.page-main__catalog {
+  background-color: @pale-grey;
+}
+
+.page-main__container--catalog {
+  .vertical-paddings (28px, 36px);
+  position: relative;
+
+  margin-top: -60px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper (@desktop-width, 0 auto, 0 60px);
+    .vertical-paddings (75px, 0);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+}
+
+.page-main__results--catalog {
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+
+.page-main__form-search--container {
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}

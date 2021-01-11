@@ -1,0 +1,37 @@
+.border-bottom-radius (@border-bottom-left-radius, @border-bottom-right-radius) {
+  border-bottom-left-radius: @border-bottom-left-radius;
+  border-bottom-right-radius: @border-bottom-right-radius;
+}
+
+.border-top-radius (@border-top-left-radius, @border-top-right-radius) {
+  border-top-left-radius: @border-top-left-radius;
+  border-top-right-radius: @border-top-right-radius;
+}
+
+.border-left-radius (@border-top-left-radius, @border-bottom-left-radius) {
+  border-top-left-radius: @border-top-left-radius;
+  border-bottom-left-radius: @border-bottom-left-radius;
+}
+
+.border-right-radius (@border-top-right-radius, @border-bottom-right-radius) {
+  border-top-right-radius: @border-top-right-radius;
+  border-bottom-right-radius: @border-bottom-right-radius;
+}
+
+.vertical-paddings (@padding-top, @padding-bottom) {
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
+}
+
+.round (@width, @height, @border-radius, @background-color) {
+  width: @width;
+  height: @height;
+  border-radius: 50%;
+  background-color: @background-color;
+}
+
+.wrapper (@width, @margin, @padding) {
+  width: @width;
+  margin: @margin;
+  padding: @padding;
+}

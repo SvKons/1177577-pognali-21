@@ -1,20 +1,20 @@
 .country-filters {
+  .border-bottom-radius (20px, 20px);
   position: relative;
   background-color: @pale-grey-blue;
   z-index: 6;
 
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-
   margin-top: -60px;
+
+  @media (min-width: @tablet-width) {
+    .border-bottom-radius (60px, 60px);
+  }
 }
 
 .country-filters__container {
+  .vertical-paddings (56px, 14px);
   display: flex;
   flex-wrap: wrap;
-
-  padding-top: 56px;
-  padding-bottom: 14px;
 
   &--close .country-filters__show {
     display: none;
@@ -25,9 +25,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 118px;
-    padding-bottom: 53px;
-    padding-right: 75px;
+    .vertical-paddings (120px, 36px);
+    padding-right: 63px;
     padding-left: 54px;
 
     &--close .toggler__text--close {
@@ -44,14 +43,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 117px;
-    padding-bottom: 74px;
+    .vertical-paddings (117px, 74px);
     padding-right: 60px;
     padding-left: 54px;
   }
 }
 
 .country-filters__name {
+  .vertical-paddings (23px, 0);
   font-size: 16px;
   font-weight: bold;
   color: @dark-blue-grey;
@@ -62,8 +61,6 @@
 
   margin: 0;
   padding-left: 29px;
-  padding-top: 20px;
-  padding-bottom: 0;
 
   &::before {
     content: "";
@@ -86,7 +83,7 @@
     order: 2;
     margin-left: 20px;
     padding: 0;
-    padding-left: 44px;
+    padding-left: 51px;
     padding-right: 5px;
     font-size: 20px;
     line-height: 24px;
@@ -165,7 +162,7 @@
   @media (min-width: @desktop-width) {
     order: 4;
 
-    margin-top: 69px;
+    margin-top: 50px;
 
     &--close {
       position: relative;
@@ -213,6 +210,7 @@
 }
 
 .country-filters__hide {
+  .vertical-paddings (6px, 6px);
   position: relative;
   font-size: 16.5px;
   font-weight: bold;
@@ -224,8 +222,6 @@
 
   margin-top: 37px;
   margin-bottom: 14px;
-  padding-top: 6px;
-  padding-bottom: 6px;
   padding-left: 110px;
   padding-right: 86px;
 
@@ -277,7 +273,7 @@
 
     &::before,
     &::after {
-      top: 51px;
+      top: 50px;
       left: 241px;
       width: 22px;
       height: 2px;
@@ -288,16 +284,16 @@
     order: 7;
 
     margin: 0;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-top: 36px;
     padding-bottom: 36px;
-    padding-left: 633px;
-    padding-right: 597px;
+    padding-left: 637px;
+    padding-right: 599px;
 
     &::before,
     &::after {
       top: 49px;
-      left: 591px;
+      left: 596px;
       width: 25px;
     }
   }
