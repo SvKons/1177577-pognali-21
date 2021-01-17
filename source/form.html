@@ -4,24 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
   <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page-body page-body--form">
   <header class="page-body__page-header page-header page-header--catalog">
-    <nav class="page-body__main-navigation page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index">
+    <nav class="page-body__main-navigation page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index main-navigation--form">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
-              <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
+              <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+              <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+              <source id="logo-mobile2" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
+              <source id="logo-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img id="logo-mobile" class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип 'Погнали'">
             </picture>
           </a>
           <button class="main-navigation__toggler" type="button">
@@ -30,20 +37,26 @@
           </div>
 
           <ul class="main-navigation__site-list site-list">
-            <li class="site-list__item">
-              <a class="main-navigation__site-link site-list__link site-list__link--current" href="#" aria-label="О сервисе">О сервисе</a>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link site-list__link--current button button--list main-navigation__site-link" href="#" aria-label="О сервисе">
+                <span data-hover="О сервисе">О сервисе</span>
+              </a>
             </li>
-            <li class="site-list__item">
-              <a class="main-navigation__site-link site-list__link" href="form.html" aria-label="Направления">Направления</a>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link button button--list main-navigation__site-link" href="form.html" aria-label="Направления">
+                <span data-hover="Направления">Направления</span>
+              </a>
             </li>
-            <li class="site-list__item">
-              <a class="main-navigation__site-link site-list__link" href="catalog.html" aria-label="Попутчики">Попутчики</a>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link button button--list main-navigation__site-link" href="catalog.html" aria-label="Попутчики">
+                <span data-hover="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
 
           <ul class="main-navigation__login login">
             <li class="login__item">
-              <a class="login__link login__link--tel button" href="tel:+78005558628" aria-label="Позвонить">
+              <a class="login__link login__link--tel" href="tel:+78005558628" aria-label="Позвонить">
                 <svg class="login__icon" width="18" height="18">
                   <use xlink:href="img/sprite.svg#phonelogin"></use>
                 </svg>
@@ -51,7 +64,7 @@
               </a>
             </li>
             <li class="login__item">
-              <a class="login__link login__link--email button" href="#" aria-label="написать">
+              <a class="login__link login__link--email" href="#" aria-label="написать">
                 <svg class="login__icon" width="18" height="14">
                   <use xlink:href="img/sprite.svg#mailmenu"></use>
                 </svg>
@@ -79,7 +92,7 @@
                 <a class="contacts__link contacts__link--navigation button" href="#" aria-label="Написать">
                   <div class="contacts__wrapper contacts__wrapper--navigation">
                     <svg class="contacts__icon" width="18" height="14">
-                      <use xlink:href="img/sprite.svg#mailmenu"></use>
+                      <use xlink:href="img/sprite.svg#mailmenubottom"></use>
                     </svg>
                   </div>
                   <span>mail@htmlacademy.ru</span>
@@ -142,10 +155,12 @@
           <div class="personal-account__photo">
 
             <picture>
+              <source media="(min-width: 1440px)" srcset="img/photo-account-desktop@1x.webp 1x, img/photo-account-desktop@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x" type="image/webp">
               <source srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/photo-account-desktop@1x.jpg 1x, img/photo-account-desktop@2x.jpg 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
-              <img class="personal-account__photo-img" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Фото профиля">
+              <img class="personal-account__photo-img" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="190" height="190" alt="Фото профиля">
             </picture>
 
           </div>
@@ -206,13 +221,13 @@
               <li class="plans__item trip">
                 <p class="trip__name"><span>1.</span>Франция, Италия</p>
                 <p class="trip__quantity">3 попутчика</p>
-                <p class="trip__date">26 мар - 29 мар</p>
+                <p class="trip__date">26 мар — 29 мар</p>
                 <a class="trip__link button" href="#" aria-label="Изменить">Изменить</a>
               </li>
               <li class="plans__item trip">
                 <p class="trip__name trip__name--pr"><span>2.</span>Таиланд, Индонезия</p>
                 <p class="trip__quantity">1 попутчик</p>
-                <p class="trip__date trip__date--ml">1 июл - 15 июл</p>
+                <p class="trip__date trip__date--ml">1 июл — 15 июл</p>
                 <a class="trip__link button" href="#" aria-label="Изменить">Изменить</a>
               </li>
             </ol>
@@ -220,7 +235,7 @@
         </div>
 
         <div class="personal-account__add-plan add-plan add-plan__container">
-          <div class="add-plan_wrapper">
+          <div class="add-plan__wrapper">
             <p class="add-plan__title">Добавить план:</p>
             <div class="add-plan__slider slider">
               <div class="slider__marker slider__marker--active"></div>
@@ -233,7 +248,7 @@
               <p class="plan-steps__step">Шаг 1.</p>
               <p class="plan-steps__step">Даты пребывания</p>
             </div>
-            <p class="plan-steps__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <p class="plan-steps__text">Укажите предпочтительное количество&nbsp;попутчиков,&nbsp;которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
             <div class="plan-steps__slider-marker slider-marker">
               <p class="slider-marker__step slider-marker__step--active">Даты</p>
               <p class="slider-marker__step">Маршрут</p>
@@ -254,7 +269,7 @@
                 <p class="registration__units">дн.</p>
                 <div class="registration__number registration__number--days">
                   <button class="registration__minus" type="button" aria-label="Уменьшить"></button>
-                  <input class="registration__control" type="number" id="duration" name="duration" placeholder="2">
+                  <input class="registration__control" type="number" id="duration" name="duration" placeholder="3">
                   <button class="registration__plus" type="button" aria-label="Увеличить"></button>
                 </div>
               </div>
@@ -438,7 +453,7 @@
               <p class="plan-steps__step">Шаг 2.</p>
               <p class="plan-steps__step">Маршрут</p>
             </div>
-            <p class="plan-steps__text plan-steps__text--mb plan-steps__text--pr">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            <p class="plan-steps__text plan-steps__text--mb plan-steps__text--pr">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
               <div class="plan-steps__slider-marker slider-marker">
                 <p class="slider-marker__step">Даты</p>
                 <p class="slider-marker__step slider-marker__step--active">Маршрут</p>
@@ -1019,7 +1034,7 @@
               <p class="plan-steps__step">Шаг 3.</p>
               <p class="plan-steps__step">Развлечение</p>
             </div>
-            <p class="plan-steps__text plan-steps__text--mb">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <p class="plan-steps__text plan-steps__text--mb">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной форме и ставить тэги.</p>
             <div class="plan-steps__slider-marker slider-marker">
               <p class="slider-marker__step">Даты</p>
               <p class="slider-marker__step">Маршрут</p>
@@ -1047,7 +1062,7 @@
                 </div>
                 <div class="action__wrap action__wrap--textarea">
                   <label class="action__label visually-hidden" for="actiontextarea">Чехия</label>
-                  <textarea class="action__control" id="actiontextarea" name="actiontextarea" aria-label="Заполните план действий в Чехии">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea class="action__control" id="actiontextarea" name="actiontextarea" placeholder="Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все." aria-label="Заполните план действий в Чехии"></textarea>
                 </div>
               </div>
             </div>
@@ -1060,7 +1075,7 @@
   </main>
 
   <footer class="page-footer page-footer--form container">
-    <div class="page-footer__container">
+    <div class="page-footer__container page-footer__container--form">
       <a class="page-footer__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
@@ -1073,7 +1088,7 @@
         </picture>
       </a>
 
-      <ul class="page-footer__socials-list socials-list">
+      <ul class="page-footer__socials-list page-footer__socials-list--form socials-list">
         <li class="socials-list__item socials-list__item--round">
           <a class="socials-list__link socials-list__link--round socials-list__link--fb" href="#" aria-label="Фейсбук">
             <svg class="socials-list__icon socials-list__icon--fb" width="11" height="21">
@@ -1097,10 +1112,10 @@
         </li>
       </ul>
 
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__by">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
-          <svg class="copyright__icon" width="27" height="34">
+      <div class="page-footer__copyright copyright copyright__form">
+        <p class="copyright__by copyright__by--form">Разработано</p>
+        <a class="copyright__link copyright__link--form" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
+          <svg class="copyright__icon copyright__icon--academy" width="27" height="34">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
@@ -1108,6 +1123,13 @@
 
     </div>
   </footer>
+
+  <script src="js/page-body.min.js"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/modal-alphabet.min.js"></script>
+  <script src="js/country-choice.min.js"></script>
+  <script src="js/error.min.js"></script>
+  <script src="js/scroll-menu.min.js"></script>
 
   </body>
 </html>

@@ -1,18 +1,17 @@
 .show {
   margin-top: 17px;
-  margin-bottom: 61px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 40px;
-    margin-bottom: 130px;
+    margin-top: 43px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (63px, 77px);
     width: 950px;
 
     margin: 0;
-    padding-top: 63px;
-    padding-bottom: 117px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -29,7 +28,7 @@
   border: none;
 
   margin: 0 60px;
-  padding-left: 33px;
+  padding-left: 35px;
 
   &::before,
   &::after {
@@ -38,7 +37,7 @@
     width: 18px;
     height: 2px;
     top: 14px;
-    left: 0;
+    left: 3px;
     background-color: @dark-slate-blue;
   }
 
@@ -77,12 +76,13 @@
     &::after {
       width: 27px;
       height: 3px;
+      left: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 344px;
-    padding-left: 49px;
+    padding-left: 52px;
   }
 }
 
@@ -91,18 +91,17 @@
   list-style-type: none;
 
   margin: 0;
-  margin-top: 20px;
+  margin-top: 22px;
   padding: 0;
   padding-bottom: 46px;
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings (26px, 24px);
     width: 688px;
     background-color: @white;
     border-radius: 20px;
 
-    margin-top: 48px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-top: 49px;
     padding-left: 28px;
     padding-right: 28px;
   }
@@ -110,7 +109,7 @@
   @media (min-width: @desktop-width) {
     width: 950px;
 
-    margin-top: 67px;
+    margin-top: 69px;
   }
 }
 
@@ -126,10 +125,7 @@
   }
 
   &:not(.show__link--active):not(.show__link--switch):active {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: @light-gold;
+    .round (50px, 50px, 50%, @light-gold);
     color: @dark-grey;
   }
 
@@ -139,20 +135,18 @@
   }
 
   &--next {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    .border-left-radius (20px, 20px);
   }
 
   &--previous {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    .border-right-radius (20px, 20px);
   }
 
   &--next::before {
     content: "";
     position: absolute;
     top: 14px;
-    left: 63px;
+    left: 65px;
     border: 10px solid #1d2e5b;
     border-left: none;
     border-top: 10px solid transparent;
@@ -163,7 +157,7 @@
     content: "";
     position: absolute;
     top: 14px;
-    left: 59px;
+    left: 66px;
     border: 10px solid #1d2e5b;
     border-right: none;
     border-top: 10px solid transparent;
@@ -193,10 +187,7 @@
     background-color: transparent;
 
     &--active {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: @light-gold;
+      .round (50px, 50px, 50%, @light-gold);
     }
 
     &--switch {

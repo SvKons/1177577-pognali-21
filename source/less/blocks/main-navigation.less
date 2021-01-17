@@ -3,7 +3,7 @@
   padding: 8px 0;
 
   &--index {
-    padding: 16px 0;
+    padding: 9px 0;
   }
 
   &--open {
@@ -12,6 +12,8 @@
     top: 0;
     z-index: 5;
     background-color: @white;
+
+    padding-top: 16px;
   }
 
   &--cross .main-navigation__toggler::before,
@@ -22,6 +24,7 @@
   &--fixed {
     position: fixed;
     background-color: @white;
+    z-index: 5;
   }
 
   &--fixed .main-navigation__toggler::before,
@@ -30,11 +33,19 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 42px;
+    padding-top: 41px;
     padding-bottom: 30px;
 
+    &--index {
+      padding: 41px 0;
+    }
+
     &--open {
-      padding-bottom: 74px;
+      padding-bottom: 66px;
+    }
+
+    &--form {
+      padding: 40px 0;
     }
   }
 
@@ -45,8 +56,12 @@
     &--open {
       position: unset;
       top: unset;
-      z-index: unset;
+      z-index: 7;
       background-color: @dark-blue-grey;
+    }
+
+    &--catalog {
+      .vertical-paddings (41px, 41px);
     }
 
     &--open .main-navigation__site-link {
@@ -71,9 +86,27 @@
 }
 
 .main-navigation__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 84%;
+
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 92%;
+    max-width: 1440px;
+
+    margin: 0 auto;
   }
 }
 
@@ -127,7 +160,7 @@
 }
 
 .main-navigation__toggler {
-  width: 40px;
+  width: 42px;
   height: 40px;
   border: none;
   background-color: transparent;
@@ -152,7 +185,7 @@
   }
 
   &::after {
-    top: 22px;
+    top: 14px;
     left: 17px;
   }
 
@@ -230,11 +263,10 @@
   padding-bottom: 50px;
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings(92px, 118px);
     order: 3;
 
-    padding-left: 58px;
-    padding-top: 87px;
-    padding-bottom: 118px;
+    padding-left: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -242,7 +274,7 @@
     display: flex;
 
     padding-top: 60px;
-    padding-left: 145px;
+    padding-left: 116px;
     padding-bottom: 10px;
   }
 }
@@ -266,13 +298,13 @@
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (50px, 50px);
     display: block;
     width: auto;
     order: 3;
 
     margin-left: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 0;
   }
 }
 
@@ -298,11 +330,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    order: 4;
+    .vertical-paddings (50px, 10px);
     display: flex;
+    order: 4;
+
     margin-left: unset;
-    padding-top: 50px;
-    padding-bottom: 10px;
   }
 }
 

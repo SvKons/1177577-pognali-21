@@ -1,41 +1,30 @@
 .plans {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  .border-top-radius (20px, 20px);
+  .vertical-paddings (25px, 60px);
   background-color: @pale-grey-dark;
 
-  padding-top: 27px;
-  padding-bottom: 60px;
-
   @media (min-width: @tablet-width) {
-    padding-top: 47px;
-    padding-bottom: 107px;
+    .border-top-radius (50px, 50px);
+    .vertical-paddings (47px, 107px);
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 44px;
-    padding-bottom: 93px;
+    .vertical-paddings (44px, 93px);
+    .border-top-radius (60px, 60px);
   }
 }
 
 .plans__container {
-  width: 320px;
+  .wrapper (@mobile-width, 0 auto, 0 25px);
   position: relative;
   z-index: 1;
-  margin: 0 auto;
-  padding: 0 25px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-
-    margin: 0 auto;
-    padding: 0 75px;
+    .wrapper (@tablet-width, 0 auto, 0 75px);
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-
-    margin: 0 auto;
-    padding: 0 125px;
+    .wrapper (@desktop-width, 0 auto, 0 125px);
   }
 }
 
@@ -46,7 +35,7 @@
   line-height: 24px;
 
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;

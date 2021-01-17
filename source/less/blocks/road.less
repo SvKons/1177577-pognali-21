@@ -49,10 +49,7 @@
   flex-grow: 1;
 
   &::before {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: @dark-slate-blue;
+    .round (8px, 8px, 50%, @dark-slate-blue);
     content: "";
     position: absolute;
     right: 48px;
@@ -88,8 +85,7 @@
   }
 
   &--modal .road__control--select {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    .border-bottom-radius (0, 0);
     position: relative;
     border: none;
     background-color: @dark-slate-blue;
@@ -156,7 +152,7 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 13.5px;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.9px;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
@@ -194,7 +190,7 @@
     height: 43px;
     top: 0;
     right: 0;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, @white 40%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 1%, @white 21%);
     background-repeat: no-repeat;
     background-size: 43px 43px;
     background-position: 0 0;
@@ -208,8 +204,7 @@
   &--select,
   &--add,
   &--modal {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    .border-left-radius (4px, 4px);
     width: unset;
     flex-grow: 1;
     padding-left: 12px;
@@ -307,8 +302,7 @@
 }
 
 .road__flag {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  .border-right-radius (4px, 4px);
   width: 52px;
   height: 43px;
   border: solid 1px @cloudy-blue;
@@ -373,8 +367,7 @@
   box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
 
   @media (min-width: @tablet-width) {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    .border-bottom-radius (10px, 10px);
     width: 575px;
     top: 70px;
   }
@@ -389,12 +382,11 @@
   width: 220px;
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings (34px, 35px);
     width: 368px;
 
-    padding-top: 34px;
     padding-left: 26px;
     padding-right: 79px;
-    padding-bottom: 96px;
   }
 
   @media (min-width: @desktop-width) {
@@ -415,7 +407,7 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 18px;
-    letter-spacing: 2px;
+    letter-spacing: -8px;
     text-align: center;
     border: solid 1px @cloudy-blue;
     border-top: none;
@@ -426,6 +418,7 @@
     width: 62px;
     height: 71px;
     border: solid 1px @cloudy-blue;
+    letter-spacing: 2px;
   }
 }
 
@@ -463,25 +456,22 @@
 }
 
 .road__country-choice {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  .border-bottom-radius (10px, 10px);
+  .vertical-paddings (12px, 15px);
   width: 220px;
   border: 1px solid @cloudy-blue;
   border-top: none;
 
-  padding-top: 12px;
-  padding-bottom: 15px;
   padding-left: 20px;
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings (25px, 15px);
     width: 207px;
     border-radius: 0;
     border: none;
     border-left: 1px solid @cloudy-blue;
 
-    padding-top: 31px;
-    padding-bottom: 15px;
-    padding-left: 24px;
+    padding-left: 27px;
   }
 }
 
@@ -513,10 +503,7 @@
 }
 
 .road__close {
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  background-color: @pale-grey;
+  .round (21px, 21px, 50%, @pale-grey);
   position: absolute;
   z-index: 3;
   border: none;

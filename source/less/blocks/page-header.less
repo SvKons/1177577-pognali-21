@@ -8,5 +8,45 @@
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/globe-back-mobile@2x.jpg");
+      background-size: 320px 569px;
+    }
   }
+
+  @media (min-width: @tablet-width) {
+    background-color: @dark-blue-grey;
+
+    &--index {
+      background-image: url("../img/globe-back-tablet@1x.jpg");
+      background-position: 50% 381px;
+      background-size: 1479px 612px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/globe-back-tablet@2x.jpg");
+        background-size: 1479px 612px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @dark-grey;
+
+    &--index {
+      .border-bottom-radius (60px, 60px);
+      background-image: url("../img/globe-back-desktop@1x.jpg");
+      background-position: 50% 0;
+      background-size: 1800px 750px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/globe-back-desktop@2x.jpg");
+        background-size: 1800px 750px;
+      }
+    }
+  }
+}
+
+.page-header__steps {
+  order: 5;
 }

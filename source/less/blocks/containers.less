@@ -1,20 +1,11 @@
 .container {
-  width: 320px;
-
-  margin: 0 auto;
-  padding: 0 25px;
+  .wrapper (@mobile-width, 0 auto, 0 22px);
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-
-    margin: 0 auto;
-    padding: 0 40px;
+    .wrapper (@tablet-width, 0 auto, 0 40px);
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-
-    margin: 0 auto;
-    padding: 0 60px;
+    .wrapper (@desktop-width, 0 auto, 0 60px);
   }
 }

@@ -1,6 +1,5 @@
 .tariffs {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  .border-bottom-radius (30px, 30px);
   background-color: @pale-grey;
   position: relative;
   z-index: 4;
@@ -8,21 +7,18 @@
   margin-top: -141px;
 
   @media (min-width: @tablet-width) {
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    .border-bottom-radius (60px, 60px);
   }
 
   @media (min-width: @desktop-width) {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    .border-bottom-radius (60px, 60px);
   }
 }
 
 .tariffs__container {
+  .vertical-paddings (80px, 39px);
   position: relative;
 
-  padding-top: 80px;
-  padding-bottom: 38px;
   padding-left: 50px;
   padding-right: 26px;
 
@@ -33,14 +29,13 @@
     right: 27px;
     width: 99px;
     height: 99px;
-    background-image: url("../../img/rates@1x.png");
+    background-image: url("../img/rates@1x.png");
     background-repeat: no-repeat;
     background-size: 99px 99px;
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 101px;
-    padding-bottom: 65px;
+    .vertical-paddings (101px, 61px);
     padding-left: 40px;
     padding-right: 33px;
 
@@ -64,8 +59,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 132px;
-    padding-bottom: 164px;
+    .vertical-paddings (135px, 164px);
     padding-left: 131px;
     padding-right: 133px;
 
@@ -139,10 +133,7 @@
     padding-bottom: 26px;
 
     &::before {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background-color: @pale-grey-blue;
+      .round (68px, 68px, 50%, @pale-grey-blue);
       content: "";
       position: absolute;
       top: 0;

@@ -127,14 +127,12 @@
 }
 
 .level-range__min-control {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  .border-left-radius (5px, 5px);
   border-right: none;
 }
 
 .level-range__max-control {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  .border-right-radius (5px, 5px);
 }
 
 input::-webkit-outer-spin-button,
@@ -182,7 +180,7 @@ input::-webkit-inner-spin-button {
     margin-top: -10px;
 
     &::before {
-      width: 205px;
+      width: 170px;
       height: 3px;
     }
   }
@@ -199,10 +197,7 @@ input::-webkit-inner-spin-button {
 }
 
 .level-range__toggle {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: transparent;
+  .round (12px, 12px, 50%, transparent);
   position: absolute;
   right: 0;
   top: -4px;
@@ -210,10 +205,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 
   &::before {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: @dark-slate-blue;
+    .round (10px, 10px, 50%, @dark-slate-blue);
     position: absolute;
     content: "";
     top: 0;
@@ -231,7 +223,6 @@ input::-webkit-inner-spin-button {
     top: -9px;
   }
 
-
   &:hover::before,
   &:focus::before {
     width: 19px;
@@ -239,14 +230,9 @@ input::-webkit-inner-spin-button {
   }
 
   &:active {
-    width: 26px;
-    height: 26px;
-    top: -12px;
-  }
-
-  &:active::before {
-    width: 26px;
-    height: 26px;
+    width: 19px;
+    height: 19px;
+    top: -9px;
   }
 
   @media (min-width: @tablet-width) {
@@ -261,15 +247,15 @@ input::-webkit-inner-spin-button {
 
     &:hover,
     &:focus {
-      top: -17px;
+      top: -19px;
     }
 
     &:active {
-      top: -21px;
+      top: -19px;
     }
 
     &--min {
-      right: 199px;
+      right: 168px;
     }
   }
 
@@ -284,11 +270,11 @@ input::-webkit-inner-spin-button {
 
     &:hover,
     &:focus {
-      top: -9px;
+      top: -17px;
     }
 
     &:active {
-      top: -12px;
+      top: -17px;
     }
   }
 }

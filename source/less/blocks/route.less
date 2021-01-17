@@ -1,36 +1,30 @@
 .route {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  .border-bottom-radius (30px, 30px);
   background-color: @pale-grey;
   position: relative;
   z-index: 6;
-  top: -62px;
+  top: -90px;
 
   @media (min-width: @tablet-width) {
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    .border-bottom-radius (60px, 60px);
+    top: -62px;
   }
 
   @media (min-width: @desktop-width) {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    .border-bottom-radius (60px, 60px);
   }
 }
 
 .route__container {
+  .vertical-paddings (64px, 35px);
   position: relative;
 
-  padding-top: 132px;
-  padding-bottom: 30px;
-
   @media (min-width: @tablet-width) {
+    .vertical-paddings (132px, 80px);
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: 439px 142px;
     background-size: 289px 575px;
-
-    padding-top: 131px;
-    padding-bottom: 80px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/flags-back@2x.png");
@@ -38,13 +32,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (225px, 139px);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     background-position: 1091px 150px;
-
-    padding-top: 225px;
-    padding-bottom: 139px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/flags-back@2x.png");
@@ -60,20 +52,22 @@
 
   margin: 0;
   margin-bottom: 20px;
+  padding: 0;
   padding-left: 25px;
+  padding-top: 94px;
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings (0, 38px);
     font-size: 45px;
     line-height: 45px;
 
-    margin-bottom: 59px;
     padding-left: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 58px;
+    margin-bottom: 60px;
     padding: 0;
-    padding-left: 802px;
+    padding-left: 800px;
   }
 }
 
@@ -82,7 +76,7 @@
   color: @greyish-brown;
 
   margin: 0;
-  margin-bottom: 61px;
+  margin-bottom: 63px;
   padding-left: 25px;
   padding-right: 50px;
 
@@ -106,16 +100,18 @@
   list-style: none;
 
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
+    top: 0;
+    right: 58px;
     margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 224px;
-    left: 132px;
+    left: 60px;
     margin: 0;
     padding: 0;
   }

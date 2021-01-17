@@ -2,6 +2,7 @@
   list-style-type: none;
 
   margin: 0;
+  margin-left: 20px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
@@ -10,15 +11,13 @@
 }
 
 .part-world__button {
+  .vertical-paddings (2px, 2px);
   text-align: left;
   font-weight: bold;
   text-transform: uppercase;
   color: @grey-opacity;
   border: none;
   background-color: @pale-grey-blue;
-
-  padding-top: 2px;
-  padding-bottom: 2px;
 
   &:hover,
   &:focus {
@@ -35,6 +34,10 @@
 
     padding: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 9px;
+  }
 }
 
 .part-world__item:not(:first-child) {
@@ -44,6 +47,10 @@
     margin-top: 0;
     margin-left: 25px;
   }
+}
+
+.part-world__item:last-child {
+  margin-bottom: 20px;
 }
 
 .part-world__button--current {

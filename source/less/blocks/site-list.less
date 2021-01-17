@@ -9,7 +9,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 590px;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-grow: 1;
 
     &::before {
       content: "";
@@ -24,9 +29,12 @@
   }
 }
 
-.site-list__item:not(:first-child) {
-  @media (min-width: @desktop-width) {
-    margin-left: 34px;
+.site-list a {
+  padding-right: 0;
+  padding-left: 39px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 32px;
   }
 }
 
@@ -37,6 +45,7 @@
   color: @dark-blue-grey;
   overflow: hidden;
   text-decoration: none;
+  text-transform: uppercase;
 
   & span {
     position: relative;

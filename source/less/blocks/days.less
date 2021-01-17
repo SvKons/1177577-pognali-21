@@ -90,7 +90,7 @@
 
   &--active {
     color: @white;
-    background-color: @darker-blue;
+    background-color: @dark-slate-blue;
   }
 
   &--focus {
@@ -165,7 +165,7 @@
     text-align: left;
     vertical-align: top;
 
-    padding: 5px 16px;
+    padding: 5px 14px;
     padding-bottom: 33px;
 
     &--month {
@@ -223,6 +223,10 @@
   background-color: transparent;
 
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    height: 34px;
+  }
 }
 
 .days__button span::before {

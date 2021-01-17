@@ -63,11 +63,14 @@
     color: @white;
   }
 
+  &--error {
+    background-color: @white;
+    color: @color-error-text;
+  }
+
   @media (min-width: @tablet-width) {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    .border-left-radius (20px, 20px);
+    .border-right-radius (0, 0);
     width: 536px;
     height: 81px;
     font-size: 24px;
@@ -77,8 +80,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    .border-left-radius (20px, 20px);
     width: 850px;
 
     padding-left: 35px;
@@ -124,10 +126,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    .border-right-radius (20px, 20px);
+    .border-left-radius (0, 0);
     width: 82px;
     height: 81px;
 
@@ -138,8 +138,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    .border-right-radius (20px, 20px);
     width: 324px;
     height: 81px;
 
@@ -147,10 +146,11 @@
       content: "Регистрация";
       position: absolute;
       top: 30px;
-      left: 36px;
+      left: 35px;
       font-size: 24px;
       font-weight: bold;
       line-height: 24px;
+      letter-spacing: -0.9px;
       text-align: left;
       color: @dark-slate-blue;
     }

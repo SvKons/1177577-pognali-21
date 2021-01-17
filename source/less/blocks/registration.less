@@ -126,8 +126,18 @@
 
   @media (min-width: @desktop-width) {
     order: 1;
+    letter-spacing: 0;
 
     margin: 0;
+
+    &--children {
+      letter-spacing: 1.8px;
+    }
+
+    &--people,
+    &--days {
+      margin-right: 25px;
+    }
   }
 }
 
@@ -193,6 +203,9 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
+
+    padding-left: 8px;
+    padding-top: 3px;
   }
 
   @media (min-width: @desktop-width) {
@@ -230,7 +243,7 @@
     color: @dark-slate-blue;
 
     margin: 0;
-    margin-left: 36px;
+    margin-left: 34px;
   }
 }
 
@@ -275,14 +288,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 25px;
+    margin-top: 26px;
   }
 
   @media (min-width: @desktop-width) {
     order: 2;
 
     margin: 0;
-    margin-left: 27px;
+    margin-left: 33px;
 
     &--days {
       margin-left: 53px;
@@ -333,8 +346,7 @@
 }
 
 .registration__minus {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  .border-left-radius (4px, 4px);
   border-right: none;
 
   &:hover,
@@ -348,8 +360,7 @@
 }
 
 .registration__plus {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  .border-right-radius (4px, 4px);
   border-left: none;
 
   &::before {

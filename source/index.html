@@ -3,24 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="preload" href="fonts/bloggersans.woff" as="font">
     <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3bb9d9d1-26e2-43aa-ab3e-a6eebc9a61d1&lang=ru_RU">
+  </script>
   </head>
   <body class="page-body">
     <header class="page-body__page-header page-header--index page-header">
-      <nav class="page-body__main-navigation page-header__main-navigation main-navigation--cross main-navigation--open main-navigation--index main-navigation">
+      <nav class="page-body__main-navigation page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index">
         <div class="main-navigation__container container">
 
           <div class="main-navigation__logo-wrapper">
             <a class="main-navigation__logo logo" href="index.html">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
-                <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-                <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
+                <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+                <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+                <source id="logo-mobile2" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
+                <source id="logo-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+                <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+                <img id="logo-mobile" class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип 'Погнали'">
               </picture>
             </a>
             <button class="main-navigation__toggler" type="button">
@@ -29,20 +38,26 @@
           </div>
 
           <ul class="main-navigation__site-list site-list">
-            <li class="site-list__item">
-              <a class="main-navigation__site-link site-list__link site-list__link--current" href="#" aria-label="О сервисе">О сервисе</a>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link site-list__link--current button button--list main-navigation__site-link" href="#" aria-label="О сервисе">
+                <span data-hover="О сервисе">О сервисе</span>
+              </a>
             </li>
-            <li class="site-list__item">
-              <a class="main-navigation__site-link site-list__link" href="form.html" aria-label="Направления">Направления</a>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link button button--list main-navigation__site-link" href="form.html" aria-label="Направления">
+                <span data-hover="Направления">Направления</span>
+              </a>
             </li>
-            <li class="site-list__item">
-              <a class="main-navigation__site-link site-list__link" href="catalog.html" aria-label="Попутчики">Попутчики</a>
+            <li class="site-list__item main-navigation__site-item">
+              <a class="site-list__link button button--list main-navigation__site-link" href="catalog.html" aria-label="Попутчики">
+                <span data-hover="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
 
           <ul class="main-navigation__login login">
             <li class="login__item">
-              <a class="login__link login__link--tel button" href="tel:+78005558628" aria-label="Позвонить">
+              <a class="login__link login__link--tel" href="tel:+78005558628" aria-label="Позвонить">
                 <svg class="login__icon" width="18" height="18">
                   <use xlink:href="img/sprite.svg#phonelogin"></use>
                 </svg>
@@ -50,7 +65,7 @@
               </a>
             </li>
             <li class="login__item">
-              <a class="login__link login__link--email button" href="#" aria-label="Написать">
+              <a class="login__link login__link--email" href="#" aria-label="Написать">
                 <svg class="login__icon" width="18" height="14">
                   <use xlink:href="img/sprite.svg#mailmenu"></use>
                 </svg>
@@ -78,7 +93,7 @@
                 <a class="contacts__link contacts__link--navigation button" href="#" aria-label="Написать">
                   <div class="contacts__wrapper contacts__wrapper--navigation">
                     <svg class="contacts__icon" width="18" height="14">
-                      <use xlink:href="img/sprite.svg#mailmenu"></use>
+                      <use xlink:href="img/sprite.svg#mailmenubottom"></use>
                     </svg>
                   </div>
                   <span>mail@htmlacademy.ru</span>
@@ -123,7 +138,7 @@
             <li class="user__item">
               <a class="user__link user__link--tel button" href="tel:+78005558628" aria-label="Позвонить">
                 <svg class="user__icon" width="18" height="18">
-                  <use xlink:href="img/sprite.svg#phonemenu"></use>
+                  <use xlink:href="img/sprite.svg#phonelogin"></use>
                 </svg>
                 <span class="visually-hidden">8 800 555-86-28</span>
               </a>
@@ -166,7 +181,8 @@
         <div class="service__container container">
           <h2 class="service__title">О сервисе</h2>
 
-          <p class="service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="service__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий&#32;<br>
+          и черпайте вдохновение в&nbsp;чужих.</p>
           <p class="service__text service__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
 
           <a class="service__link button button--arrow button--bg" href="form.html" aria-label="Подробнее">Подробнее</a>
@@ -177,7 +193,7 @@
         <div class="route__container container">
 
           <h2 class="route__title">Направления</h2>
-          <p class="route__text">Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <p class="route__text">Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и&nbsp;чем можно там заняться.</p>
 
           <ul class="route__list country-list">
             <li class="country-list__item">
@@ -186,7 +202,7 @@
                   <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x" type="image/webp">
                   <source srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
-                  <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-desktop@2x.jpg 2x" alt="фото страны">
+                  <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-desktop@2x.jpg 2x" width="270" height="110" alt="фото страны">
                 </picture>
               </div>
               <div class="country-list__container">
@@ -207,7 +223,7 @@
                   <source media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x" type="image/webp">
                   <source srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
-                  <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="фото страны">
+                  <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="фото страны">
                 </picture>
               </div>
               <div class="country-list__container">
@@ -228,13 +244,14 @@
                   <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x" type="image/webp">
                   <source srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
-                  <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="фото страны">
+                  <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270" height="110" alt="фото страны">
                 </picture>
               </div>
-              <div class="country-list__container">
-                <div class="country-list__wrapper">
+              <div class="country-list__container country-list__container--czech">
+                <div class="country-list__wrapper country-list__wrapper--czech">
                   <h3 class="country-list__name">Чехия</h3>
-                  <p class="country-list__slogan">Закоулки старой Европы</p>
+                  <p class="country-list__slogan">
+                    Закоулки <br>&#32;старой Европы</p>
                 </div>
                 <p class="country-list__travelers country-list__travelers--czech">5326</p>
               </div>
@@ -252,17 +269,16 @@
         <div class="travelers__container container">
 
           <h2 class="travelers__title">Попутчики</h2>
-          <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и
-            коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+          <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен&nbsp;пляж и коктейль, <br> а другому&nbsp;маршрут для хайкинга.</p>
 
-          <p class="travelers__text travelers__text--bold">Теперь можно легко найти&nbsp;единомышленников!</p>
+          <p class="travelers__text travelers__text--bold">Теперь можно легко <br> найти единомышленников!</p>
 
           <ul class="travelers__list">
             <li class="travelers__item travelers__item-card card">
 
               <picture>
                 <source srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x" type="image/webp">
-                <img class="card__photo" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" alt="Фото профиля">
+                <img class="card__photo" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="285" height="285" alt="Фото профиля">
               </picture>
 
               <div class="card__container">
@@ -340,7 +356,7 @@
 
               <picture>
                 <source srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x" type="image/webp">
-                <img class="card__photo" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" alt="Фото профиля">
+                <img class="card__photo" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="285" height="285" alt="Фото профиля">
               </picture>
 
               <div class="card__container">
@@ -441,7 +457,8 @@
         <h2 class="visually-hidden">Ответим на вопросы</h2>
         <div class="questions__container container">
           <p class="questions__title">Заинтересовались?</p>
-          <p class="questions__text">Зарегистрируйтесь, это&nbsp;быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
+          <p class="questions__text">Зарегистрируйтесь, <br> это быстро и бесплатно!</p>
+          <p class="questions__text questions__text--registration">Уже зарегистрированы? Тогда скорее
             <a class="questions__link" href="login.html" aria-label="Авторизуйтесь">авторизуйтесь</a>.
           </p>
 
@@ -468,7 +485,7 @@
               <a class="contacts__link contacts__link--navigation button" href="#" aria-label="Написать">
                 <div class="contacts__wrapper contacts__wrapper--navigation">
                   <svg class="contacts__icon" width="18" height="14">
-                    <use xlink:href="img/sprite.svg#mailmenu"></use>
+                    <use xlink:href="img/sprite.svg#mailmenubottom"></use>
                   </svg>
                 </div>
                 <span>mail@htmlacademy.ru</span>
@@ -482,11 +499,18 @@
         <h2 class="visually-hidden">Карта</h2>
         <div class="adress__container container">
           <p class="adress__name">ул. Большая Конюшенная, 19/8</p>
-          <a class="adress__link button" href="#" aria-label="Проложить маршрут">Проложить маршрут</a>
+          <a class="adress__link button button--map" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.329990%2C59.937028&mode=routes&rtext=59.938673%2C30.328600~59.938635%2C30.323118&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=16" aria-label="Проложить маршрут"><span>Проложить маршрут</span>
+            <div class="adress__wrapper">
+              <svg class="adress__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#triangle-arrow-right"></use>
+              </svg>
+            </div>
+          </a>
+
         </div>
       </section>
 
-      <section class="map">
+      <section class="map map__index">
         <div class="map__yandex" id="map"></div>
         <h2 class="map__title visually-hidden">Как добраться?</h2>
         <div class="map__picture container">
@@ -543,10 +567,10 @@
           </li>
         </ul>
 
-        <div class="page-footer__copyright copyright">
+        <div class="page-footer__copyright copyright copyright__index">
           <p class="copyright__by">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
-            <svg class="copyright__icon" width="27" height="34">
+            <svg class="copyright__icon copyright__icon--academy" width="27" height="34">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
@@ -555,7 +579,7 @@
       </div>
     </footer>
 
-    <div class="tariffs-modal container">
+    <div class="tariffs-modal">
       <h2 class="tariffs-modal__title">Бизнес-тарифы</h2>
 
       <ul class="tariffs-modal__list">
@@ -579,6 +603,11 @@
 
       <button class="tariffs-modal__close button" aria-label="Закрыть окно с тарифами">Закрыть окно</button>
     </div>
+    <script src="js/page-body.min.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/tariffs.min.js"></script>
+    <script src="js/map.min.js"></script>
+    <script src="js/scroll-menu.min.js"></script>
 
   </body>
 </html>

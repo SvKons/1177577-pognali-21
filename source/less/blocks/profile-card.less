@@ -1,30 +1,20 @@
 .profile-card {
-  width: 270px;
+  .wrapper(270px, 0 auto, 0 20px);
+  .vertical-paddings (13px, 22px);
   position: relative;
   background-color: @white;
   border-radius: 20px;
 
-  margin: 0 auto;
-  padding: 0 20px;
-  padding-top: 13px;
-  padding-bottom: 22px;
-
   @media (min-width: @tablet-width) {
-    width: 688px;
+    .wrapper(688px, 0 auto, 0 35px);
+    .vertical-paddings (32px, 21px);
 
-    margin: 0 auto;
-    padding: 0 35px;
-    padding-top: 32px;
-    padding-bottom: 21px;
     padding-right: 26px;
   }
 
   @media (min-width: @desktop-width) {
+    .wrapper(950px, 0, 0);
     display: flex;
-    width: 950px;
-
-    margin: 0;
-    padding: 0;
   }
 }
 
@@ -38,12 +28,11 @@
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (45px, 33px);
     width: 665px;
 
-    padding-top: 45px;
-    padding-bottom: 27px;
     padding-left: 59px;
-    padding-right: 40px;
+    padding-right: 46px;
 
     &::before {
       content: "";
@@ -53,6 +42,20 @@
       top: 41px;
       left: 345px;
       background-image: linear-gradient(to bottom, transparent 5%, @pale-grey 10%, @pale-grey 90%, transparent 95%);
+    }
+
+    &--two {
+      .vertical-paddings (46px, 27px);
+      padding-left: 59px;
+      padding-right: 46px;
+    }
+
+    &--three {
+      .vertical-paddings (46px, 29px);
+    }
+
+    &--four {
+      .vertical-paddings (48px, 25px);
     }
   }
 }
@@ -94,8 +97,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    .border-right-radius (0, 0);
     position: relative;
     width: 285px;
     height: 285px;
@@ -135,10 +137,7 @@
   padding-right: 143px;
 
   &::before {
-    width: 6px;
-    height: 6px;
-    border-radius: 2.6px;
-    background-color: salmon;
+    .round (6px, 6px, 2.6px, @salmon);
     content: "";
     position: absolute;
     top: 11px;
@@ -194,7 +193,7 @@
     font-size: 20px;
     line-height: 24px;
 
-    margin-top: 17px;
+    margin-top: 18px;
     padding: 0;
   }
 
@@ -211,7 +210,7 @@
   margin-top: 12px;
   padding-left: 7px;
 
-  &--twoflags {
+  &--two-flags {
     padding-bottom: 6px;
   }
 
@@ -243,7 +242,7 @@
     margin-top: 20px;
     padding: 0;
 
-    &--twoflags {
+    &--two-flags {
       margin-top: 22px;
       padding-bottom: 2px;
     }
@@ -272,7 +271,7 @@
       display: none;
     }
 
-    &--twoflags {
+    &--two-flags {
       margin-top: 2px;
     }
   }
@@ -370,7 +369,7 @@
 
 .profile-card__level {
   margin: 0;
-  margin-left: 50px;
+  margin-left: 40px;
 
   @media (min-width: @tablet-width) {
     width: 60px;
@@ -420,6 +419,7 @@
   @media (min-width: @tablet-width) {
     width: 60px;
     height: 60px;
+    right: 10px;
   }
 }
 

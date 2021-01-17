@@ -1,18 +1,11 @@
 .form-search__container {
-  width: 320px;
-
-  margin: 0 auto;
-  padding: 0 25px;
-  padding-top: 21px;
-  padding-bottom: 27px;
+  .wrapper (@mobile-width, 0 auto, 0 25px);
+  .vertical-paddings (54px, 27px);
+  background-color: @pale-grey;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
-
-    margin: 0 auto;
-    padding: 0 40px;
-    padding-top: 78px;
-    padding-bottom: 40px;
+    .wrapper (@tablet-width, 0 auto, 0 40px);
+    .vertical-paddings (75px, 40px);
   }
 
   @media (min-width: @desktop-width) {

@@ -1,29 +1,21 @@
 .plan-steps {
-  width: 270px;
+  .wrapper (270px, 0 auto, 0 25px);
+  .vertical-paddings (22px, 6px);
   position: relative;
-  border-radius: 10px;
   background-color: @white;
   border: none;
-
-  margin: 0 auto;
-  padding: 0 25px;
-  padding-top: 22px;
-  padding-bottom: 6px;
+  border-radius: 10px;
 
   &--pb {
     padding-bottom: 22px;
   }
 
   @media (min-width: @tablet-width) {
-    width: 618px;
-    border-radius: 30px;
+    .wrapper (618px, 0 auto, 0 41px);
+    .vertical-paddings (45px, 47px);
     display: flex;
     flex-wrap: wrap;
-
-    margin: 0 auto;
-    padding: 0 44px;
-    padding-top: 45px;
-    padding-bottom: 47px;
+    border-radius: 30px;
 
     &--pb {
       padding-bottom: 55px;
@@ -31,12 +23,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1320px;
-
-    margin: 0 auto;
-    padding: 0 160px;
-    padding-top: 88px;
-    padding-bottom: 99px;
+    .wrapper (1320px, 0 auto, 0 160px);
+    .vertical-paddings (89px, 98px);
     border-radius: 60px;
 
     &--pb {
@@ -55,7 +43,7 @@
 }
 
 .plan-steps__title {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     order: 1;
@@ -101,6 +89,7 @@
 
   margin: 0;
   margin-bottom: 21px;
+  padding: 0 3px;
 
   @media (min-width: @tablet-width) {
     order: 2;
@@ -115,7 +104,7 @@
     }
 
     &--pr {
-      padding-right: 130px;
+      padding-right: 100px;
     }
   }
 
@@ -124,7 +113,7 @@
     margin-bottom: 56px;
 
     &--pr {
-      padding-right: 590px;
+      padding-right: 586px;
     }
   }
 }
@@ -139,7 +128,7 @@
 }
 
 .plan-steps__registration {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -155,23 +144,23 @@
 }
 
 .plan-steps__calendar {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     order: 4;
 
     margin-top: 41px;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
   }
 }
 
 .plan-steps__road {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 48px;
@@ -180,7 +169,7 @@
   @media (min-width: @desktop-width) {
     flex-grow: 1;
 
-    margin-bottom: 55px;
+    margin-bottom: 56px;
   }
 }
 
@@ -189,7 +178,7 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
-  color: @dark-grey;
+  color: @dark-slate-blue;
   border: none;
   border-radius: 20px;
   padding: 5px 40px;
@@ -241,7 +230,7 @@
     order: 7;
 
     &--prev {
-      margin-left: 46px;
+      margin-left: auto;
       padding-right: 0;
     }
   }
@@ -251,9 +240,8 @@
       width: 204px;
       text-align: right;
 
-      margin-left: auto;
       padding-right: 3px;
-      padding-left: 35px;
+      padding-left: 30px;
     }
   }
 }
@@ -265,7 +253,7 @@
     order: 3;
     flex-grow: 1;
 
-    margin-bottom: 45px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
@@ -274,15 +262,15 @@
 }
 
 .plan-steps__submit {
-  padding-left: 65px;
+  padding-left: 66px;
   padding-right: 72px;
   margin-bottom: 6px;
 
   @media (min-width: @tablet-width) {
     order: 4;
 
-    padding-left: 32px;
+    padding-left: 36px;
     padding-bottom: 29px;
-    padding-right: 139px;
+    padding-right: 138px;
   }
 }

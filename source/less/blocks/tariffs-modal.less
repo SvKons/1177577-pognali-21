@@ -1,16 +1,33 @@
-/*.tariffs-modal {
+.tariffs-modal {
   position: absolute;
-  margin-left: 50%;
   transform: translateX(-50%);
   z-index: 8;
   top: 3690px;
   width: 270px;
   display: none;
-  padding-top: 33px;
   background-color: @white;
   border-radius: 20px;
   box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
-}*/
+
+  margin-left: 50%;
+  padding-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    top: 4261px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px 0 @dark-slate-blue-opacity;
+
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 750px;
+    top: 3098px;
+
+    margin-left: 51%;
+  }
+}
 
 .tariffs-modal__show {
   display: block;
@@ -25,6 +42,12 @@
 
   margin: 0;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    margin-top: 52px;
+    padding: 0 152px;
+  }
 }
 
 .tariffs-modal__list {
@@ -35,15 +58,38 @@
   margin: 0;
   margin-top: 29px;
   padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 22px;
+    line-height: 1.27;
+
+    margin-top: 46px;
+    padding: 0 92px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 47px;
+    padding: 0 60px;
+  }
 }
 
 .tariffs-modal__item {
+  .vertical-paddings (12px, 9px);
   position: relative;
-  text-align: center;
+  text-align: left;
   border-top: 1px solid @black-opacity5;
 
-  padding-top: 15px;
-  padding-bottom: 7px;
+  @media (min-width: @tablet-width) {
+    .vertical-paddings (17px, 10px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .vertical-paddings (13px, 14px);
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .tariffs-modal__item:last-child {
@@ -59,19 +105,18 @@
 }
 
 .tariffs-modal__close {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  .border-bottom-radius (20px, 20px);
+  .vertical-paddings (23px, 15px);
   width: 270px;
   font-weight: bold;
   line-height: 24px;
+  letter-spacing: 1.5px;
   border: none;
   color: @dark-slate-blue;
   background-color: @pale-grey-modal;
 
-  padding-top: 23px;
-  padding-bottom: 23px;
   margin: 0 auto;
-  margin-top: 33px;
+  margin-top: 36px;
 
   &:hover,
   &:focus {
@@ -81,5 +126,25 @@
   &:active {
     background-color: @pale-grey;
     color: @dark-slate-blue-opacity30;
+  }
+
+  @media (min-width: @tablet-width) {
+    .border-bottom-radius (22px, 22px);
+    width: 688px;
+    height: 108px;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    text-transform: none;
+
+    margin-top: 54px;
+    padding-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 750px;
+
+    margin-top: 54px;
+    padding-top: 14px;
   }
 }

@@ -18,6 +18,7 @@
 }
 
 .steps__item {
+  .vertical-paddings (22px, 38px);
   position: relative;
   width: 270px;
   font-size: 18px;
@@ -28,8 +29,6 @@
   border-radius: 10px;
 
   margin-top: -15px;
-  padding-top: 21px;
-  padding-bottom: 38px;
   padding-left: 25px;
 
   &--one {
@@ -111,6 +110,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    .vertical-paddings (30px, 62px);
     font-weight: bold;
     line-height: 24px;
     text-align: left;
@@ -119,13 +119,10 @@
     font-size: 24px;
 
     margin-top: 0;
-    padding-top: 31px;
-    padding-bottom: 61px;
     padding-left: 33px;
 
     &--one {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      .border-bottom-radius (0, 0);
       width: 379px;
     }
 
@@ -137,8 +134,7 @@
     }
 
     &--two {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      .border-bottom-radius (0, 0);
       width: 344px;
       margin-left: -35px;
     }
@@ -151,8 +147,7 @@
     }
 
     &--three {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      .border-top-radius (0, 0);
       width: 379px;
       padding-right: 162px;
     }
@@ -165,8 +160,7 @@
     }
 
     &--four {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      .border-top-radius (0, 0);
       width: 344px;
       margin-left: -35px;
     }
@@ -180,11 +174,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    .vertical-paddings (27px, 31px);
     border-radius: 20px;
 
     margin-left: -40px;
-    padding-top: 27px;
-    padding-bottom: 31px;
     padding-left: 30px;
 
     &--one {

@@ -1,11 +1,12 @@
 .action {
   @media (min-width: @tablet-width) {
     border-top: 1px solid @cloudy-blue;
-    padding-top: 27px;
+
+    padding-top: 26px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 71px;
+    padding-top: 72px;
   }
 }
 
@@ -23,6 +24,7 @@
   font-size: 18px;
   line-height: 18px;
   color: @dark-slate-blue;
+
   padding-left: 12px;
 
   &--gr::before {
@@ -30,7 +32,7 @@
     position: absolute;
     width: 50px;
     height: 18px;
-    background-image: linear-gradient(to right, transparent 10%, @white 40%);
+    background-image: linear-gradient(to right, transparent 10%, @white 70%);
     top: 0;
     right: 0;
   }
@@ -39,12 +41,17 @@
     font-size: 30px;
     font-weight: bold;
     line-height: 18px;
+
     padding-left: 0;
     padding-top: 13px;
 
     &--gr::before {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 11px;
   }
 }
 
@@ -64,6 +71,8 @@
 }
 
 .action__wrap--error::before {
+  .border-bottom-radius (4px, 4px);
+  .vertical-paddings (19px, 20px);
   content: "Это поле должно быть запонено";
   position: absolute;
   width: 220px;
@@ -74,15 +83,11 @@
   text-align: left;
   color: @color-error-text;
   background-color: @very-light-pink;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
   border: 1px solid @color-error-text;
   border-top: none;
   z-index: 2;
 
   padding-left: 20px;
-  padding-top: 19px;
-  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     width: 499px;
@@ -103,7 +108,7 @@
   height: 220px;
   text-align: left;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 23px;
   background-color: @white;
   color: @greyish-brown;
   resize: none;
@@ -118,19 +123,18 @@
   @media (min-width: @tablet-width) {
     width: 499px;
     height: 142px;
-    font-family: "BloggerSans", sans-serif;
+    font-family: "BloggerSans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 20px;
-    line-height: 23px;
 
-    padding-top: 15px;
-    padding-left: 18px;
+    padding-top: 18px;
+    padding-left: 20px;
     padding-right: 35px;
   }
 
   @media (min-width: @desktop-width) {
     width: 730px;
-    font-family: "BloggerSans", sans-serif;
+    font-family: "BloggerSans", "Arial", sans-serif;
     font-weight: 400;
 
     padding-top: 22px;
@@ -139,31 +143,28 @@
   }
 }
 
-
 .action__flag {
   position: relative;
+
   margin-left: auto;
 
   &::before {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: @dark-slate-blue;
+    .round (6px, 6px, 50%, @dark-slate-blue);
     content: "";
     position: absolute;
-    top: 3px;
-    left: -190px;
+    top: 9px;
+    left: -188px;
   }
 
   &--line::after {
     content: "";
     position: absolute;
     width: 15px;
-    height: 287px;
+    height: 283px;
     border: 2px solid @dark-slate-blue;
     border-right: none;
-    top: 6px;
-    left: -200px;
+    top: 11px;
+    left: -199px;
   }
 
   @media (min-width: @tablet-width) {
@@ -173,7 +174,7 @@
     padding-right: 35px;
 
     &::before {
-      @include round (15px, 15px, 50%, @dark-slate-blue);
+      .round (15px, 15px, 50%, @dark-slate-blue);
       content: "";
       position: absolute;
       top: 15px;
@@ -188,7 +189,7 @@
       height: 259px;
       background-color: @dark-slate-blue;
       top: 20px;
-      right: 1px;
+      right: 5px;
       left: unset;
       border: none;
     }
@@ -202,16 +203,16 @@
     padding-left: 48px;
 
     &::before {
-      top: 16px;
+      top: 15px;
       right: unset;
-      left: 0;
+      left: 1px;
     }
 
     &--line::after {
       height: 260px;
       top: 19px;
       right: unset;
-      left: 1px;
+      left: 7px;
     }
   }
 }
