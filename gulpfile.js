@@ -81,8 +81,10 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/*.svg")
-  .pipe(svgstore())
+  return gulp.src("source/img/icons/*.svg")
+  .pipe(svgstore({
+      inlineSvg: true
+    }))
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"))
 }
@@ -91,11 +93,11 @@ exports.sprite = sprite;
 
 // Copy
 
-const copy = () => {
-  return gulp.src([
+const copy = (done) => {
+  gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}"
+    "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
   })
@@ -116,7 +118,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
